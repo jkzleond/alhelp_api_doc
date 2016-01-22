@@ -1,0 +1,1521 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"error",
+				"error_auth	(common.coffee)"
+			],
+			[
+				"成功",
+				"成功示例：	(Account.php)"
+			],
+			[
+				"true",
+				"true表示成功，false表示失败"
+			],
+			[
+				"apiParam",
+				"@apiParamExample	apiDoc"
+			],
+			[
+				"apiSuccess",
+				"@apiSuccessExample	apiDoc"
+			],
+			[
+				"apiSUccess",
+				"@apiSuccessExample	apiDoc"
+			],
+			[
+				"getTalkPic",
+				"getTalkPicById	(Talk.php)"
+			],
+			[
+				"avg",
+				"avg_amount"
+			],
+			[
+				"get_invo",
+				"get_involve_sql"
+			],
+			[
+				"total",
+				"total"
+			],
+			[
+				"number",
+				"number_format	(services.php)"
+			],
+			[
+				"top",
+				"top20_insurance_info"
+			],
+			[
+				"get_top",
+				"get_top20_insurance_info_result"
+			],
+			[
+				"get_top20_insurance",
+				"get_top20_insurance_info_result"
+			],
+			[
+				"InsuranceInfoToMark",
+				"InsuranceINfoToMarkTmp"
+			],
+			[
+				"get_insurance",
+				"get_insurance_info_mark_bind"
+			],
+			[
+				"draw",
+				"draw_period_tpl"
+			],
+			[
+				"activity_add",
+				"activity_add_draw_period_btn"
+			],
+			[
+				"view",
+				"viewManager"
+			],
+			[
+				"push",
+				"pushMessageAction	(PushmessageController.php)"
+			],
+			[
+				"addPush",
+				"addPushMessageBatchWithCondition	(PushNotifications.php)"
+			],
+			[
+				"Push",
+				"PushNotifications	(PushNotifications.php)"
+			],
+			[
+				"style",
+				"stylesheet"
+			],
+			[
+				"render",
+				"renderCarserviceUseList"
+			],
+			[
+				"car-ser",
+				"car-service-item"
+			],
+			[
+				"activity",
+				"activity_combogrid"
+			],
+			[
+				"th",
+				"thumbnail_img"
+			],
+			[
+				"new",
+				"new_content_id"
+			],
+			[
+				"local",
+				"local_favour_combogrid"
+			],
+			[
+				"source",
+				"source_url"
+			],
+			[
+				"car_service_",
+				"car_service_list"
+			],
+			[
+				"default_disabled",
+				"default_disabled_"
+			],
+			[
+				"link_",
+				"link_item_tpl"
+			],
+			[
+				"link_to",
+				"link_to_type"
+			],
+			[
+				"insurance_type_field_links",
+				"insurance_type_field_links_container"
+			],
+			[
+				"insurance_type_filed",
+				"insurance_type_filed_links_window"
+			],
+			[
+				"serach",
+				"search_cate_combotree"
+			],
+			[
+				"links",
+				"link_source_field_id"
+			],
+			[
+				"sha",
+				"box-shadow"
+			],
+			[
+				"insurance_type_cu",
+				"insurance_type_cu_form_tabs"
+			],
+			[
+				"des",
+				"des_editor"
+			],
+			[
+				"renderInsurance",
+				"renderInsuranceTypeCategory"
+			],
+			[
+				"insurance_type",
+				"insurance_type_cu_dialog"
+			],
+			[
+				"addInsuranceType",
+				"addInsuranceTypeField"
+			],
+			[
+				"discount_",
+				"discount_setting"
+			],
+			[
+				"insurance_type_company",
+				"insurance_type_company_container"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"node",
+				"node_map"
+			],
+			[
+				"tree",
+				"tree_selected"
+			],
+			[
+				"addInsuranceC",
+				"addInsurancCategory"
+			],
+			[
+				"cate",
+				"cate_tree_menu"
+			],
+			[
+				"type",
+				"type_combotree"
+			],
+			[
+				"duration_",
+				"duration_days_number_box"
+			],
+			[
+				"start",
+				"start_time_box"
+			],
+			[
+				"clock",
+				"clock_type_des"
+			],
+			[
+				"del",
+				"del_success"
+			],
+			[
+				"insure_pro",
+				"insure_process_page_view"
+			],
+			[
+				"http_get",
+				"http_get_request_body"
+			],
+			[
+				"final",
+				"final_http_response"
+			],
+			[
+				"http",
+				"http_request"
+			],
+			[
+				"http_re",
+				"http_respone"
+			],
+			[
+				"action",
+				"action_method_ref_class"
+			],
+			[
+				"controller",
+				"controller_class_name"
+			],
+			[
+				"param",
+				"param_name"
+			],
+			[
+				"action_parameter",
+				"action_parameter_rel_class"
+			],
+			[
+				"action_",
+				"action_method_ref_class"
+			],
+			[
+				"request",
+				"request_method"
+			],
+			[
+				"SF",
+				"SF_BaseRouter::QUERY_STRING_MODE"
+			],
+			[
+				"SF_",
+				"SF_BaseRouter"
+			],
+			[
+				"jqm",
+				"jqm_widget_ext	(main.js)"
+			],
+			[
+				"goto",
+				"goto_btn"
+			],
+			[
+				"Insu",
+				"InsureProcessFormModel"
+			],
+			[
+				"login",
+				"login_form_model"
+			],
+			[
+				"_onLogin",
+				"_onLoginFormModelSync"
+			],
+			[
+				"base",
+				"base_url"
+			],
+			[
+				"SF_BaseView",
+				"SF_BaseViewEngine	(SF_BaseViewEgine.php)"
+			],
+			[
+				"method",
+				"method_exists"
+			],
+			[
+				"Http",
+				"HttpResponse	(HttpResponse.php)"
+			],
+			[
+				"SF_Base",
+				"SF_BaseController	(SF_BaseController.php)"
+			],
+			[
+				"_default",
+				"_default_controller_name"
+			],
+			[
+				"_action",
+				"_action_suffix"
+			],
+			[
+				"native",
+				"nativeQuery	(Insurance.php)"
+			],
+			[
+				"php",
+				"perhaps	(backbone.js)"
+			],
+			[
+				"canvas",
+				"canvas_license_a"
+			],
+			[
+				"compress",
+				"compress_width"
+			],
+			[
+				"_onT",
+				"_onThumbnailImageLoad"
+			],
+			[
+				"com",
+				"company"
+			],
+			[
+				"apply_ac",
+				"apply_actual_page_view"
+			],
+			[
+				"is",
+				"is_compulsory"
+			],
+			[
+				"compulsory",
+				"compulsoryShortCut"
+			],
+			[
+				"_onFormModel",
+				"_onFormModelSync"
+			],
+			[
+				"car_info",
+				"car_info_id"
+			],
+			[
+				"update",
+				"updateCarInfo"
+			],
+			[
+				"upload",
+				"upload_dir"
+			],
+			[
+				"encodeURI",
+				"encodeURIComponent	(ActuaryPricePageView.js)"
+			],
+			[
+				"show",
+				"showGallery"
+			],
+			[
+				"get_illegal_",
+				"get_illegal_order_sql"
+			],
+			[
+				"get_illegal_total",
+				"get_illegal_total_bind"
+			],
+			[
+				"get_illegal",
+				"get_illegal_total_sql"
+			],
+			[
+				"page",
+				"page_num"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"echo",
+				"echoAccessXML"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "common.coffee",
+			"settings":
+			{
+				"buffer_size": 567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Account.php",
+			"settings":
+			{
+				"buffer_size": 6135,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "im.py",
+			"settings":
+			{
+				"buffer_size": 6621,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lzl_goods.coffee",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "collection.coffee",
+			"settings":
+			{
+				"buffer_size": 1434,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jkzleond/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 198,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jkzleond/apidoc"
+	],
+	"file_history":
+	[
+		"/home/jkzleond/apidoc/apidoc.json",
+		"/home/jkzleond/apidoc/error.coffee",
+		"/home/jkzleond/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/jkzleond/apidoc/apidoc.sublime-project",
+		"/ubuntu/www/php/car_mate_admin/app/models/AdminUser.php",
+		"/ubuntu/www/php/car_mate_admin/app/views/index/index.volt",
+		"/ubuntu/www/php/car_mate_admin/app/models/ModelEx.php",
+		"/ubuntu/www/php/car_mate_admin/vendor/phalcon/incubator/Library/Phalcon/Db/Adapter/Mongo/Collection.php",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/StatisticsController.php",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/ActivityController.php",
+		"/home/jkzleond/.config/sublime-text-3/Packages/DocBlockr/Base File.sublime-settings",
+		"/home/jkzleond/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+		"/ubuntu/www/php/car_mate_admin/app/models/Order.php",
+		"/ubuntu/www/php/car_mate_admin/app/models/Insurance.php",
+		"/home/jkzleond/下载/alhelp_original/web/crossdomain.xml",
+		"/ubuntu/www/php/car_mate_admin/app/views/award/awardList.volt",
+		"/ubuntu/www/php/car_mate_admin/app/config/routes.php",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/WelcomepageController.php",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/IllegalController.php",
+		"/ubuntu/www/php/car_mate_admin/app/views/illegal/orderDetail.volt",
+		"/ubuntu/www/php/car_mate_admin/app/views/illegal/orderManage.volt",
+		"/ubuntu/www/php/car_mate_admin/app/views/activity/awardManage.volt",
+		"/ubuntu/www/php/car_mate_admin/app/views/activity/activityList.volt",
+		"/ubuntu/www/php/car_mate_admin/app/views/activity/drawPeriod.volt",
+		"/ubuntu/www/php/car_mate_admin/app/config/plugins.php",
+		"/ubuntu/www/php/car_mate_admin/app/views/illegal/driverInfoManage.volt",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/InsuranceController.php",
+		"/ubuntu/www/php/car_mate_admin/app/plugins/InsuranceDrawFilter.php",
+		"/ubuntu/www/php/car_mate_admin/public/insurance_isuse.log",
+		"/ubuntu/www/php/car_mate_admin/app/views/insurance/insuranceList.volt",
+		"/ubuntu/www/php/car_mate_admin/app/config/services.php",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/AdminuserController.php",
+		"/ubuntu/www/php/car_mate_admin/app/views/activity/drawPeriodAward.volt",
+		"/ubuntu/www/php/car_mate_admin/app/plugins/AuthFilter.php",
+		"/home/jkzleond/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/jkzleond/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jkzleond/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/UserController.php",
+		"/ubuntu/www/php/car_mate_admin/app/controllers/AuserController.php",
+		"/home/jkzleond/ebook/w3school.chw",
+		"/www/php/car_mate_admin/app/controllers/LocalfavourController.php",
+		"/www/php/car_mate_admin/app/models/Order.php",
+		"/www/php/car_mate_admin/app/views/illegal/driverInfoManage.volt",
+		"/www/php/car_mate_admin/app/controllers/AdminuserController.php",
+		"/www/php/car_mate_admin/app/models/Activity.php",
+		"/www/php/car_mate_admin/public/images/welcomepage/getAdvPic/88.png",
+		"/www/php/car_mate_admin/public/images/welcomepage/getAdvPic/85.png",
+		"/www/php/car_mate_admin/app/models/ActivityUser.php",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceType.volt",
+		"/www/php/car_mate_admin/app/views/illegal/orderManage.volt",
+		"/www/php/car_mate_admin/app/controllers/AwardController.php",
+		"/www/php/car_mate_admin/app/models/Award.php",
+		"/www/php/car_mate_admin/app/views/illegal/orderDetail.volt",
+		"/www/php/car_mate_admin/public/js/car_mate/core.js",
+		"/www/php/car_mate_admin/app/views/base.volt",
+		"/www/php/car_mate_admin/app/models/Deal.php",
+		"/www/php/car_mate_admin/app/controllers/PushmessageController.php",
+		"/www/php/car_mate_admin/app/views/pushmessage/index.volt",
+		"/www/php/car_mate_admin/app/models/PrivateMessage.php",
+		"/www/php/car_mate_admin/app/models/PushNotifications.php",
+		"/www/php/car_mate_admin/app/controllers/IllegalController.php",
+		"/www/php/car_mate_admin/app/controllers/InsuranceController.php",
+		"/www/php/car_mate_admin/app/views/index/index.volt",
+		"/www/php/car_mate_admin/app/config/routes.php",
+		"/www/php/car_mate_admin/app/controllers/UserController.php",
+		"/www/php/car_mate_admin/app/models/User.php",
+		"/www/php/code.html",
+		"/www/php/car_mate_admin/app/views/carservice/manage.volt",
+		"/www/php/imgt.html",
+		"/www/php/car_mate_admin/app/models/IamUser.php",
+		"/www/php/car_mate_admin/app/controllers/ProvinceController.php",
+		"/www/php/car_mate_admin/app/views/welcomepage/welcomeAdvList.volt",
+		"/www/php/car_mate_admin/app/views/activity/activityList.volt",
+		"/www/php/car_mate_admin/app/models/Insurance.php",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceList.volt",
+		"/www/php/car_mate_admin/app/controllers/ActivityController.php",
+		"/www/php/car_mate_admin/app/views/localfavour/localFavourScrollAd.volt",
+		"/home/jkzleond/下载/iscroll-master/demos/scrollbars/index.html",
+		"/www/php/car_mate_admin/app/controllers/CarserviceController.php",
+		"/www/php/car_mate_admin/app/models/SimpleMod.php",
+		"/www/php/car_mate_admin/app/models/Content.php",
+		"/www/php/car_mate_admin/public/js/perfect-scroller.min.js",
+		"/www/php/weifa/cyh/Control/OrderPay.php",
+		"/home/jkzleond/文档/OrderPay.php",
+		"/www/php/car_mate_admin/public/js/jquery.pin.js",
+		"/www/php/car_mate_admin/app/config/services.php",
+		"/www/php/car_mate_admin/app/messages/zh-cn.php",
+		"/www/php/car_mate_admin/app/config/config.php",
+		"/www/php/car_mate_admin/app/views/emu/volt_compile_text.volt",
+		"/www/php/car_mate_admin/app/library/palm/utils/ScriptEngine.php",
+		"/www/php/car_mate_admin/app/library/palm/utils/HttpConnect.php",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceNewInfoDetail.volt",
+		"/www/php/car_mate_admin/app/controllers/EmuController.php",
+		"/www/php/car_mate_admin/app/views/emu/seTest.volt",
+		"/www/php/car_mate_admin/app/cache/_www_php_car_mate_admin_app_views_emu_setest.volt.php",
+		"/www/php/car_mate_admin/app/cache/xxxxx.php",
+		"/www/php/car_mate_admin/app/cache/1445925352.mids",
+		"/www/php/car_mate_admin/app/cache/1445924511.mids",
+		"/www/php/car_mate_admin/app/views/base.php",
+		"/www/php/car_mate_admin/app/controllers/EmuController.php~",
+		"/www/php/car_mate_admin/app/views/activity/orderManage.volt",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceReservation.volt",
+		"/www/php/car_mate_admin/app/views/insurance/company.volt",
+		"/home/jkzleond/下载/5.2V2.rar",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceNewInfoManage.volt",
+		"/www/php/car_mate_admin/app/models/Field.php",
+		"/www/php/car_mate_admin/app/views/insurance/InsurnaceOrderManage.volt",
+		"/www/php/car_mate_admin/app/views/insurance/insurancePackage.volt",
+		"/www/php/car_mate_admin/app/cache/_www_php_car_mate_admin_app_views_insurance_insurancetype.volt.php",
+		"/home/jkzleond/下载/车优惠会议纪要-2015-10-20.docx",
+		"/home/jkzleond/select_DISTINCT_hphm_as__from_CarInf.html",
+		"/www/php/car_mate_admin/app/controllers/FieldController.php",
+		"/www/php/car_mate_admin/public/js/underscore.js",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceGoods.volt",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceBuy.volt",
+		"/www/php/car_mate_admin/app/views/index/status.volt",
+		"/www/php/car_mate_admin/app/views/activity/detail.volt",
+		"/www/php/car_mate_admin/app/views/activity/involvedUser.volt",
+		"/www/php/car_mate_admin/app/views/insurance/insuranceOrderInfo.volt",
+		"/www/php/car_mate_admin/app/views/activity/orderDetail.volt",
+		"/www/php/car_mate_admin/app/controllers/ItemController.php",
+		"/www/php/car_mate_admin/app/views/activity/activityList.volt~",
+		"/www/php/car_mate_admin/app/controllers/WelcomepageController.php",
+		"/www/php/car_mate_admin/app/models/WelcomePage.php",
+		"/www/php/car_mate_admin/app/cache/_www_php_car_mate_admin_app_views_welcomepage_welcomeadvlist.volt.php",
+		"/www/php/car_mate_admin/app/views/statistics/firstPreliminaryCalculationStatistics.volt",
+		"/www/php/car_mate_admin/app/views/statistics/actStatistics.volt",
+		"/www/php/car_mate_admin/app/controllers/StatisticsController.php"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 111.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"apiSuccess",
+			"criteira",
+			"talk-reply-detail-btn",
+			"talk-order-detail-btn",
+			"talk_process_",
+			"talk_detail",
+			"illegal",
+			"compusory",
+			"InsuranceINfoToMarkTmp",
+			"抽奖时段",
+			"link_item_tpl",
+			"activity_cu_window",
+			"预览",
+			"car_owner",
+			"\\.end_date",
+			"\\.start_date",
+			".start_date",
+			"illegal-process-btn",
+			"end_datebox",
+			"start_datebox",
+			"cirteria",
+			"citeria",
+			"推送",
+			"push_process_",
+			"illegal_",
+			"perfectScrollbar",
+			"Carservice",
+			"resortCarService",
+			"renderCarserviceUseList",
+			"renderAdUseList",
+			"startAdTask",
+			"resortAd",
+			"useAd",
+			"unuseAd",
+			"create_car_service_from",
+			"service_ad",
+			"\\$\\('#car_service_window'\\).window",
+			"$('#car_service_window').window",
+			"name=\"id\"",
+			"del-car-service",
+			"service-ad",
+			"car_service_grid",
+			"serivce",
+			"Serice",
+			"',",
+			"添加",
+			"thumbnail_pic",
+			"add-pic",
+			".add-pic",
+			"activity_combogrid",
+			"scroll_",
+			"滚动窗口",
+			"滚动广告",
+			"scroll-",
+			"scroll_ad_",
+			"insurance_type_field_container",
+			"insurance-type-field-default-disabled-btn",
+			"'click', '.insurance-type-field-default-disabled-btn'",
+			"renderInsuranceTypeField",
+			"renderInsuranceTypeFieldLink",
+			"insurance_type_field_links_container",
+			"insurance_type_filed_links_container",
+			"renderInsuranceTypeFieldLink",
+			"renderInsuranceFieldLink",
+			"renderInsuranceTypeFieldLink",
+			"renderInsuranceTypeFieldLin",
+			"renderInsuranceTypeFieldLink",
+			"field-link-to-value",
+			"field-link-value",
+			"visibale",
+			"visiable",
+			"insurance-type-filed-link-item",
+			"link-to-field",
+			"link_to_field",
+			"insurance_type_field_links_container",
+			"link-with-visable",
+			"insurance-field-link-item",
+			"isnurance",
+			"移出字段关联项",
+			"窗口",
+			"insurance_type_field_links_btn",
+			"事件",
+			"//事件",
+			"_type_filed_",
+			"_add_price_item",
+			"4",
+			"cate_combotree",
+			"combotree",
+			"控件",
+			"insurance_type_grid",
+			">\n",
+			"insurance_newinfo",
+			"_combo_grid",
+			"parts",
+			"关联到",
+			"移出",
+			"order.",
+			"illegalOrderDetail",
+			"illegal_order_",
+			"preliminary_premium",
+			"newinfo_cu_dialog",
+			"insurance_order_",
+			"criteira",
+			"addInsuranceInfo",
+			"addInsuranceInfoAction",
+			"getInsuranceInfoListAction",
+			"insuranceInfoManageAction",
+			"insuranceInfoManage",
+			"insurance/orderList.json",
+			"illegal_",
+			"insurance_company_",
+			"updateInsuranceType",
+			"addInsuranceType",
+			"updateInsuranceType",
+			"cur_type_id",
+			"insurance-type-del-btn",
+			"insurance-type-company-discount",
+			"editor",
+			"renderInsuranceTypeCompany",
+			"compay",
+			"comanpay",
+			"renderAdUseList",
+			"data-filed-id",
+			"insurance-type-field-container",
+			"移出属性",
+			"80",
+			"values",
+			"label"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"criteria",
+			"talk-reply-list-btn",
+			"talk-reply-detail-btn",
+			"talk_reply_",
+			"talk_reply",
+			"talk",
+			"compulsory",
+			"InsuranceInfoToMarkTmp",
+			"user",
+			".login_end_date",
+			".login_start_date",
+			"push_msg_btn",
+			"login_end_datebox",
+			"login_start_datebox",
+			"criteria",
+			"push_",
+			"renderCarserviceUseList",
+			"startCarserviceTask",
+			"resortCarservice",
+			"useCarservice",
+			"unuseCarservice",
+			"service",
+			"Service",
+			"thumbnail_img",
+			"add-car-service",
+			"car_service_",
+			"汽车服务窗口",
+			"汽车服务",
+			"car-service-",
+			"car_service_",
+			"renderInsuranceTypeFieldLink",
+			"visible",
+			"link-with-visiable",
+			"insurance-type-field-link-item",
+			"insurance",
+			"_type_field_",
+			"_add_actuary_item",
+			"insurance_type",
+			"_combogrid",
+			"关联",
+			"移除",
+			"info.",
+			"illegalNewInfoDetail",
+			"insurance_newinfo_",
+			"newinfo_detail_window",
+			"insurance_newinfo_",
+			"insurance_order_",
+			"company",
+			"insurance_type_field_container",
+			"移出字段",
+			"addInsuranceCategory",
+			"insurance_type_",
+			"criteria",
+			"insurance_reservation_",
+			"activity_user_",
+			"order_",
+			"insurance_reservation_",
+			"option>\\n<option",
+			"order_illegal_user_",
+			"OrderIllegalTrackTotalStatistics",
+			"OrderIllegalTrackStatistics",
+			"order_illegal_track_statistics_",
+			"OrderIllegalUserTotalStatistics",
+			"OrderIllegalNewUserStatistics",
+			"order_illegal_new_user_statistics",
+			"UserTotalStatistics",
+			"IllegalNewUserStatistics",
+			"</option>\\n<option",
+			"\"insure_$1\"",
+			"</option>\\n<option",
+			"\"insure_$1\"",
+			"$1$2",
+			"$1",
+			"get",
+			"name",
+			"this->_raw_content",
+			"this->_headers",
+			"this->_content",
+			"this->_cookies",
+			"$_content",
+			"\\$_cookies",
+			"\\$_headers",
+			"\\$_raw_content",
+			"$_raw_content",
+			"bx",
+			".bx",
+			"bx",
+			"\\.insurance_$1",
+			"#insurance_page $1",
+			"#insurance_page \\1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "common.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								563,
+								563
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Account.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3477.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "im.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77,
+								77
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lzl_goods.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "collection.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/jkzleond/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "apidoc.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 563.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/www/php/car_mate_local_favour/car_mate_local_favour.sublime-project"
+			]
+		],
+		"width": 428.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 341.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
