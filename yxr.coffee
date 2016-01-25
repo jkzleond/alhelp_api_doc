@@ -1061,6 +1061,80 @@ HTTP/1.1 200 OK
 @apiUse error_1001 
 ###
 
+###
+@api {get} /demands/collaborates/:demand_id$ 合作列表
+@apiName demands/collaborates
+@apiGroup Demand
+@apiVersion 1.0.1
+
+@apiDescription 获取指定ID需求的合作列表
+
+@apiUse header_token
+
+@apiParam {Interger} demand_id 需求ID
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": {
+    "prevPage": null,
+    "nextPage": "http://api.alhelp.net/demand/collaborates?p=2",
+    "list": [
+      {
+        "id": "75",
+        "pid": null,
+        "member_id": "5095",
+        "member_name": "yjhkzy",
+        "role_type": "1",
+        "demand_type": "1",
+        "require_identity": "1",
+        "require_authenticate": "1",
+        "require_security": "1",
+        "description": "求云南师范大学英语学科教育专业课复习资料",
+        "content_demand": "我是自考本科毕业，现在边上班边考研，十月底才开始准备，急需云南师范大学专业课复习资料[高级英语和333教育综合},肯请各位学长或老师帮帮忙，此事如有进展请速至电于我，谢谢!",
+        "content_course": null,
+        "content_reference": null,
+        "remarks": null,
+        "yy_number": null,
+        "image": "",
+        "cost_type": "1",
+        "cost": "200",
+        "platform_cost": "0",
+        "profes_type": "1",
+        "city": "47206",
+        "university": "48125",
+        "college": "48191",
+        "major_code": null,
+        "major": "45108",
+        "qq": "604820087",
+        "mobile": "604820087",
+        "set_time": "0000-00-00 00:00:00",
+        "close_remark": null,
+        "rating": "0",
+        "status": "1",
+        "add_time": "2013-10-25 22:17:50",
+        "update_time": null,
+        "praise_num": "0",
+        "review_num": "0",
+        "learning_teaching_plan": null,
+        "is_message": "0",
+        "is_bid": "0",
+        "is_contract": "0",
+        "is_automatic": "0",
+        "attachment": "",
+        "set_yy": "",
+        "member_nickname": "yjhkzy",
+        "collect_num": "0",
+        "num_view": "52"
+      }
+    ]
+  }
+}
+
+@apiUse error_1001 
+###
+
 
 ###
 @api {delete} /demands/delete/:id 删除需求/服务

@@ -1,6 +1,6 @@
 """
 @api {get} /im/message/rct_contacts/[:p]/[:ps] 获取最近联系人
-@apiName contact:R
+@apiName 1
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription 获取最近联系人
@@ -104,7 +104,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 """
 @api {post} /im/message/:type/:to_id\d$ 发送悄悄话和群聊
-@apiName message:C
+@apiName 2
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription 发送悄悄话和群聊
@@ -135,13 +135,15 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 """
 
 """
-@api {post} im/group$ 创建群
-@apiName G_C1
+@api {post} /im/group$ 创建群
+@apiName 3
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription
 创建群 <br>
 注: image参数为url 需要先调用上传文件接口获取上传后资源的url
+
+@apiUse header_token
 
 @apiParam (request) {String} name 群名称
 @apiParam (request) {String} image logo图片url
@@ -172,12 +174,14 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 """
 
 """
-@api {DELETE} im/group/:id\d$ 删除群
-@apiName G_D1
+@api {DELETE} /im/group/:id\d$ 删除群
+@apiName 4
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription
 删除群
+
+@apiUse header_token
 
 @apiParam (request) {Interger} id 群名称
 
@@ -196,12 +200,14 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 """
 
 """
-@api {PUT} im/group/:id\d$ 更新群
-@apiName G_U1
+@api {PUT} /im/group/:id\d$ 更新群
+@apiName 5
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription
 更新
+
+@apiUse header_token
 
 @apiParam (request) {Interger} id 群名称
 @apiParam (request) {String} name 群名称
@@ -222,8 +228,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 """
 
 """
-@api {GET} im/group/:id\d$ 获取指定ID群信息
-@apiName G_R1
+@api {GET} /im/group/:id\d$ 获取指定ID群信息
+@apiName 6
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription
@@ -237,7 +243,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {String} group_id 群号
 @apiSuccess (return_title) {String} name 群名称
 @apiSuccess (return_title) {String} image 群logo图片url
-@apiSuccess (return_title) {Interger} member_id 群成员数
+@apiSuccess (return_title) {Interger} member_num 群成员数
 @apiSuccess (return_title) {String} owner_id 群主ID
 @apiSuccess (return_title) {String} owner_nickname 群主昵称
 @apiSuccess (return_title) {String} add_time 创建时间
@@ -261,4 +267,119 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiError (error_title) 1500 操作失败
 @apiUse error_1001
 @apiUse error_auth
+"""
+
+"""
+@api {GET} /im/groups/[:uid]/[:is_owner] 获取[指定用户ID所在或所有]群列表
+@apiName 7
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription
+获取[指定用户ID所在]群列表
+
+@apiParam {Interger} [uid] 用户ID
+@apiParam {Interger} [is_owner] 是否为群主, 也可使用 filters 过滤owner_id字段
+@apiParam {JsonObject} [filters] 过滤条件, 可使用id, group_id, name, owner_id 作为过滤条件\n
+                                    支持 eq, neq, gt, egt, lt, elt, [not] like, [not] between, [not] in等表达式
+@apiParamExample {json} Body示例:
+{
+    "fitlers": {
+        "name": ["like", "%XXX%"],
+        "member_num": ["gt", 200]
+    }
+}
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (return_title) {String} prev_page 上一页url
+@apiSuccess (return_title) {String} next_page 下一页url
+@apiSuccess (return_title) {Interger} total_rows 总条目数
+@apiSuccess (return_title) {Interger} total_pages 总页数
+@apiSuccess (return_title) {JsonObject[]} list 列表数据s
+@apiSuccess (return_title) {Interger} id 群ID
+@apiSuccess (return_title) {String} group_id 群号
+@apiSuccess (return_title) {String} name 群名称
+@apiSuccess (return_title) {String} image 群logo url
+@apiSuccess (return_title) {Interger} member_num 群成员数
+@apiSuccess (return_title) {String} owner_id 群主ID
+@apiSuccess (return_title) {String} owner_nickname 群主昵称
+@apiSuccess (return_title) {String} add_time 创建时间  
+
+@apiSuccessExample {json} 成功示例:
+{
+    "data": {
+        "prev_page": null,
+        "next_page": "http:\/\/localhost:8850\/v1\/im\/groups?p=2&ps=2",
+        "total_rows":"9",
+        "total_pages":5,
+        "list": [
+            {
+                "id":"26",
+                "group_id":"000026",
+                "name":"我们的群",
+                "member_num":"0",
+                "image":"http:\/\/api.alhelp.net",
+                "is_push":"1",
+                "add_time":"2016-01-23 00:00:25",
+                "owner_id":"31527",
+                "owner_nickname":"jkzleond"
+            },
+            {
+                "id":"25",
+                "group_id":"000025",
+                "name":"我们的群",
+                "member_num":"1",
+                "image":"http:\/\/api.alhelp.net",
+                "is_push":"0",
+                "owner_id":"31527",
+                "add_time":"2016-01-22 23:59:27",
+                "owner_nickname":"jkzleond"
+            }        
+        ]
+    }
+}
+"""
+
+"""
+@api {POST} /im/group/:id\d/member 添加群成员
+@apiName add_group_mmeber
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 添加群成员
+
+@apiUse header_token
+
+@apiParam {Interger} id 群ID
+@apiParam {Interger[]} member_ids 用户ID数组
+
+@apiParamExample {json} Body示例：
+{
+    "member_ids": [31527, 1257, 7757]
+}
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+"""
+
+"""
+@api {DELETE} /im/group/:id\d/member 删除群成员
+@apiName delete_group_mmeber
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 删除群成员
+
+@apiUse header_token
+
+@apiParam {Interger} id 群ID
+@apiParam {Interger[]} member_ids 用户ID数组
+
+@apiParamExample {json} Body示例：
+{
+    "member_ids": [31527, 1257, 7757]
+}
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
 """
