@@ -100,6 +100,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
        "member_nickname": "高教社培训网络学院",
        "collect_num": "0",
        "num_view": "0",
+       "memo": "非统考 学校 学院 专业",
        "city_string": "西藏",
        "university_string": "西藏民族学院",
        "college_string": "医学院",

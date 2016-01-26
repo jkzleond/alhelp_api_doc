@@ -51,7 +51,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
   			"set_yy": "",
   			"member_nickname": "科大科院考研网",
   			"collect_num": "0",
-  			"num_view": "9"
+  			"num_view": "9",
+        "memo": "非统考 学校 学院 专业" //备注
   		}
   	],
     "count": 20,
@@ -99,6 +100,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {String} member_nickname 发布用户的昵称
 @apiSuccess (return_title) {String} collect_num 未知
 @apiSuccess (return_title) {String} num_view 浏览数量
+@apiSuccess (return_title) {String} memo 备注
 
 
 @apiError (error_title) 3012 该需求类型不存在
@@ -160,7 +162,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
         "set_yy": "",
         "member_nickname": "科大科院考研网",
         "collect_num": "0",
-        "num_view": "9"
+        "num_view": "9",
+        "memo": "非统考 学校 学院 专业" //备注
       }
     ],
     "count": 20,
@@ -208,6 +211,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {String} member_nickname 发布用户的昵称
 @apiSuccess (return_title) {String} collect_num 未知
 @apiSuccess (return_title) {String} num_view 浏览数量
+@apiSuccess (return_title) {String} memo 备注
 
 
 @apiError (error_title) 3012 该需求类型不存在
@@ -267,6 +271,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
         "member_nickname": "科大科院考研网",
         "collect_num": "0",
         "num_view": "9",
+        "memo": "非统考 学校 学院 专业", //备注
         "comments": [
           {
             "id": "3",
@@ -337,6 +342,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {String} member_nickname 发布用户的昵称
 @apiSuccess (return_title) {String} collect_num 未知
 @apiSuccess (return_title) {String} num_view 浏览数量
+@apiSuccess (return_title) {String} memo 备注
 @apiSuccess (return_title) {JsonArray} comments 该需求的评论
 @apiSuccess (return_title) {JsonArray} explains 该需求的解释
 ###
@@ -754,6 +760,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
         "member_nickname": "221174",
         "collect_num": "0",
         "num_view": "95",
+        "memo": "非统考 学校 学院 专业", //备注
         "member": {
           "id": "21174",
           "last_serve_time": "1447513963",
@@ -876,6 +883,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {String} member_nickname 发布用户的昵称
 @apiSuccess (return_title) {String} collect_num 未知
 @apiSuccess (return_title) {String} num_view 浏览数量
+@apiSuccess (return_title) {String} memo 备注
 
 
 @apiError (error_title) 3012 该需求类型不存在
@@ -1045,6 +1053,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
         "member_nickname": "221174",
         "collect_num": "0",
         "num_view": "95",
+        "memo": "非统考 学校 学院 专业", //备注
         "member": {
           "id": "21174",
           "last_serve_time": "1447513963",
@@ -1167,6 +1176,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {String} member_nickname 发布用户的昵称
 @apiSuccess (return_title) {String} collect_num 未知
 @apiSuccess (return_title) {String} num_view 浏览数量
+@apiSuccess (return_title) {String} memo 备注
 
 
 @apiError (error_title) 3012 该需求类型不存在

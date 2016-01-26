@@ -20,6 +20,11 @@
 ###
 
 ###
+@apiDefine header_token_opt
+@apiHeader (req_header) {String} [X-Auth-Token] 授权token
+###
+
+###
 @apiDefine request 请求参数
 ###
 

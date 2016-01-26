@@ -448,6 +448,104 @@ HTTP/1.1 200 OK
 ###
 
 ###
+@api {delete} /talks/:id/del 删除说说
+@apiName delete_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+@apiError (error_title) 1501 无操作权限
+@apiError (error_title) 4004 说说不存在
+###
+
+###
+@api {put} /talks/:id/top 置顶说说
+@apiName top_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+###
+
+###
+@api {put} /talks/:id/hot 设置热门说说
+@apiName hot_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+###
+
+###
+@api {put} /talks/:id/ann 设置公告说说
+@apiName ann_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+###
+
+###
 @api {get} /talks/similarity/:id 获取相似说说
 @apiName similarity_talks
 @apiGroup Talks
@@ -494,7 +592,7 @@ HTTP/1.1 200 OK
 @apiGroup Talks
 @apiVersion 1.0.0
 
-@apiUse header_token
+@apiUse header_token_opt
 
 @apiParam (request) {String} id 说说ID
 
@@ -514,6 +612,8 @@ HTTP/1.1 200 OK
 @apiSuccess (返回数据:data:details) {String} subjectName 学科名
 @apiSuccess (返回数据:data:details) {String} content 说说内容
 @apiSuccess (返回数据:data:details) {String} praise_num 点赞数
+@apiSuccess (返回数据:data:details) {String='1', '0'} is_paised 是否点过赞(已登陆用户) '1': 是, '0': 否
+@apiSuccess (返回数据:data:details) {String='1', '0'} is_com_joined 是否在该说说所属圈子(已登陆用户) '1': 是, '0': 否
 @apiSuccess (返回数据:data:details) {Array} attachments 图片附件URL地址列表
 
 @apiSuccess (返回数据:data:comment) {String} id 回复ID
@@ -626,15 +726,16 @@ HTTP/1.1 200 OK
   "fans":{
     "list":[
       {
-        " add_time":"2332112",
-        " from_member_id":"1323",
-        " from_member_nickname":"name",
-        " last_pillow_talk_time":"123213234"
+        "add_time":"2332112",
+        "from_member_id":"1323",
+        "from_member_nickname":"name",
+        "last_pillow_talk_time":"123213234",
+        "is_mutual": "1" //是否互相关注
       },
     ……
     ],
-    " count":20,
-    " next_page":null
+    "count":20,
+    "next_page":null
   }
 }
 ###
@@ -656,15 +757,16 @@ HTTP/1.1 200 OK
   "fans":{
     "list":[
       {
-        " add_time":"2332112",
-        " from_member_id":"1323",
-        " from_member_nickname":"name",
-        " last_pillow_talk_time":"123213234"
+        "add_time":"2332112",
+        "from_member_id":"1323",
+        "from_member_nickname":"name",
+        "last_pillow_talk_time":"123213234",
+        "is_mutual": "1" //是否互相关注
       },
     ……
     ],
-    " count":20,
-    " next_page":null
+    "count":20,
+    "next_page":null
   }
 }
 
@@ -687,15 +789,16 @@ HTTP/1.1 200 OK
   "fans":{
     "list":[
       {
-        " add_time":"2332112",
-        " from_member_id":"1323",
-        " from_member_nickname":"name",
-        " last_pillow_talk_time":"123213234"
+        "add_time":"2332112",
+        "from_member_id":"1323",
+        "from_member_nickname":"name",
+        "last_pillow_talk_time":"123213234",
+        "is_mutual": "1" //是否互相关注
       },
     ……
     ],
-    " count":20,
-    " next_page":null
+    "count":20,
+    "next_page":null
   }
 }
 ###
@@ -717,10 +820,11 @@ HTTP/1.1 200 OK
   "fans":{
     "list":[
       {
-        " add_time":"2332112",
-        " from_member_id":"1323",
-        " from_member_nickname":"name",
-        " last_pillow_talk_time":"123213234"
+        "add_time":"2332112",
+        "from_member_id":"1323",
+        "from_member_nickname":"name",
+        "last_pillow_talk_time":"123213234",
+        "is_mutual": "1" //是否互相关注
       },
     ……
     ],
@@ -736,20 +840,29 @@ HTTP/1.1 200 OK
 @apiGroup Talks
 @apiVersion 1.0.0
 
-@apiUse header_token
+@apiUse header_token_opt
 
 @apiParam (request) {String} type 筛选类型，university（大学）、school（学院）、major（专业）
 @apiParam (request) {String} type_id 筛选类型对于数据的ID（大学ID、学院ID、专业ID）
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (return_data) {JsonObject[]} list 说说列表
+@apiSuccess (return_data) {String} count 当前数据在总数
+@apiSuccess (return_data) {String} next_page 下一页地址
+@apiSuccess (list参数) {String} is_com_owner 是否圈主
+@apiSuccess (list参数) {String} is_praised 是否赞过
 
 @apiSuccessExample {json} 成功示例：
 HTTP/1.1 200 OK
 {
   "success": true,
   "data": {
-    "list": {...},
+    "list": {
+      "is_com_owner": "1",
+      "is_praised": "0",
+      ...
+      },
     "count": 0,
     "next_page": null
   }
@@ -757,31 +870,6 @@ HTTP/1.1 200 OK
 @apiUse error_1001
 ###
 
-###
-@api {get} /talks/listby/:type/:type_id 获取说说列表（通过大学、学院或专业ID）
-@apiName listby
-@apiGroup Talks
-@apiVersion 1.0.0
-
-@apiUse header_token
-
-@apiParam (request) {String} type 筛选类型，university（大学）、school（学院）、major（专业）
-@apiParam (request) {String} type_id 筛选类型对于数据的ID（大学ID、学院ID、专业ID）
-
-@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
-@apiSuccess (return_title) {JsonObject} data 封装的返回数据
-
-@apiSuccessExample {json} 成功示例：
-HTTP/1.1 200 OK
-{
-  "success": true,
-  "data": {
-    "list": {...},
-    "count": 0,
-    "next_page": null
-  }
-}
-###
 
 ###
 @api {post} /zoom_image 缩放图片
