@@ -22,23 +22,23 @@
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
 @apiSuccess (return_data) {JsonObject[]} list 订单列表
 @apiSuccess (return_data) {JsonObject[]} count 订单条目数
-@apiSuccess (list参数) {String} id 订单ID
-@apiSuccess (list参数) {String} order_num 订单号
-@apiSuccess (list参数) {String} group_num 字订单号
-@apiSuccess (list参数) {String} from_member_id 买家ID
-@apiSuccess (list参数) {String} to_member_id 卖家ID
-@apiSuccess (list参数) {String} total 订单金额
-@apiSuccess (list参数) {String} province 省代码
-@apiSuccess (list参数) {String} city 市代码
-@apiSuccess (list参数) {String} area 区代码
-@apiSuccess (list参数) {String} address 收货地址
-@apiSuccess (list参数) {String} post_code 邮编
-@apiSuccess (list参数) {String} name 收货人姓名 
-@apiSuccess (list参数) {String} phone 收货人电话
-@apiSuccess (list参数) {String} content 备注
-@apiSuccess (list参数) {String} shipping_template_id 邮费模板ID
-@apiSuccess (list参数) {String} shipping_price 邮费
-@apiSuccess (list参数) {String} add_time 订单生成时间
+@apiSuccess (返回数据list) {String} id 订单ID
+@apiSuccess (返回数据list) {String} order_num 订单号
+@apiSuccess (返回数据list) {String} group_num 字订单号
+@apiSuccess (返回数据list) {String} from_member_id 买家ID
+@apiSuccess (返回数据list) {String} to_member_id 卖家ID
+@apiSuccess (返回数据list) {String} total 订单金额
+@apiSuccess (返回数据list) {String} province 省代码
+@apiSuccess (返回数据list) {String} city 市代码
+@apiSuccess (返回数据list) {String} area 区代码
+@apiSuccess (返回数据list) {String} address 收货地址
+@apiSuccess (返回数据list) {String} post_code 邮编
+@apiSuccess (返回数据list) {String} name 收货人姓名 
+@apiSuccess (返回数据list) {String} phone 收货人电话
+@apiSuccess (返回数据list) {String} content 备注
+@apiSuccess (返回数据list) {String} shipping_template_id 邮费模板ID
+@apiSuccess (返回数据list) {String} shipping_price 邮费
+@apiSuccess (返回数据list) {String} add_time 订单生成时间
 
 
 @apiSuccessExample {json} 成功示例:
