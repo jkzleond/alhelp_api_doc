@@ -1,5 +1,5 @@
 """
-@api {POST} v1/order 生成订单
+@api {POST} /order 生成订单
 @apiName gen_order
 @apiGroup Order
 @apiVersion 1.0.0
