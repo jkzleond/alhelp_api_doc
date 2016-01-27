@@ -232,7 +232,9 @@ HTTP/1.1 200 OK
 @apiGroup Talks
 @apiVersion 1.0.0
 
-@apiUse header_token_opt
+@apiUse header_token
+
+@apiParam (request) {Interger} [community_id] 圈子ID(实际为 school id 的值), 提交该值可获取相应圈子的说说
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -267,6 +269,8 @@ HTTP/1.1 200 OK
 
 @apiUse header_token_opt
 
+@apiParam (request) {Interger} [community_id] 圈子ID(实际为 school id 的值), 提交该值可获取相应圈子的说说
+
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
 
@@ -300,7 +304,8 @@ HTTP/1.1 200 OK
 
 @apiUse header_token_opt
 
-@apiParam (request) uid 用户ID
+@apiParam (request) {String}uid 用户ID
+@apiParam (request) {Interger} [community_id] 圈子ID(实际为 school id 的值), 提交该值可获取相应圈子的说说
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -332,7 +337,9 @@ HTTP/1.1 200 OK
 @apiGroup Talks
 @apiVersion 1.0.0
 
-@apiUse header_token_opt
+@apiUse header_token
+
+@apiParam (request) {Interger} [community_id] 圈子ID(实际为 school id 的值), 提交该值可获取相应圈子的说说
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -364,7 +371,43 @@ HTTP/1.1 200 OK
 @apiGroup Talks
 @apiVersion 1.0.0
 
+@apiUse header_token
+
+@apiParam (request) {Interger} [community_id] 圈子ID(实际为 school id 的值), 提交该值可获取相应圈子的说说
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (return_data) {JsonObject[]} list 说说列表
+@apiSuccess (return_data) {String} count 当前数据在总数
+@apiSuccess (return_data) {String} next_page 下一页地址
+@apiSuccess (list参数) {String} is_com_owner 是否圈主
+@apiSuccess (list参数) {String} is_praised 是否赞过
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": {
+    "list": {
+      "is_com_owner": "1",
+      "is_praised": "0",
+      ...
+      },
+    "count": 0,
+    "next_page": null
+  }
+}
+###
+
+###
+@api {get} /talks/list/master/page/:page 获取名师说说
+@apiName talk_mslist
+@apiGroup Talks
+@apiVersion 1.0.0
+
 @apiUse header_token_opt
+
+@apiParam (request) {Interger} [community_id] 圈子ID(实际为 school id 的值), 提交该值可获取相应圈子的说说
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
