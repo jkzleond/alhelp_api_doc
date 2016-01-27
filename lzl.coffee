@@ -495,6 +495,7 @@ HTTP/1.1 200 OK
 
 @apiUse error_1001
 @apiError (error_title) 1500 操作失败
+@apiUse error_auth
 ###
 
 ###
@@ -519,6 +520,7 @@ HTTP/1.1 200 OK
 
 @apiUse error_1001
 @apiError (error_title) 1500 操作失败
+@apiUse error_auth
 ###
 
 ###
@@ -543,6 +545,7 @@ HTTP/1.1 200 OK
 
 @apiUse error_1001
 @apiError (error_title) 1500 操作失败
+@apiUse error_auth
 ###
 
 ###
@@ -567,6 +570,7 @@ HTTP/1.1 200 OK
 
 @apiUse error_1001
 @apiError (error_title) 1500 操作失败
+@apiUse error_auth
 ###
 
 ###
@@ -591,6 +595,7 @@ HTTP/1.1 200 OK
 
 @apiUse error_1001
 @apiError (error_title) 1500 操作失败
+@apiUse error_auth
 ###
 
 ###
@@ -615,6 +620,7 @@ HTTP/1.1 200 OK
 
 @apiUse error_1001
 @apiError (error_title) 1500 操作失败
+@apiUse error_auth
 ###
 
 ###
