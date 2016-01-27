@@ -498,6 +498,30 @@ HTTP/1.1 200 OK
 ###
 
 ###
+@api {put} /talks/:id/top_off 取消说说置顶
+@apiName top_off_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+###
+
+###
 @api {put} /talks/:id/hot 设置热门说说
 @apiName hot_talks
 @apiGroup Talks
@@ -522,8 +546,56 @@ HTTP/1.1 200 OK
 ###
 
 ###
+@api {put} /talks/:id/hot_off 取消说说热门
+@apiName hot_off_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+###
+
+###
 @api {put} /talks/:id/ann 设置公告说说
 @apiName ann_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Interger} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": null
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+###
+
+###
+@api {put} /talks/:id/ann_off 取消公告说说
+@apiName ann_off_talks
 @apiGroup Talks
 @apiVersion 1.0.0
 
