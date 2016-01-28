@@ -18,6 +18,44 @@
 @apiParam (参数:products) {Interger} table_id 商品ID
 @apiParam (参数:products) {Interger} quantity 商品数量(每个商品)
 
+@apiParamExample {json} Body示例：
+{
+    'address_id': '13',
+    'items': [
+        {
+            'business_id': '1167',
+            'products': [
+                {
+                    'table_name': 'book',
+                    'table_id': '41',
+                    'quantity': 10          
+                },
+                {
+                    'table_name': 'book',
+                    'table_id': '42',
+                    'quantity': 5           
+                }
+            ],
+            'shipping_template_id': '0',
+            'shipping_price': '0.00',
+            'remark': '给卖家的留言'
+        },
+        {
+            'business_id': '8039',
+            'products': [
+                {
+                    'table_name': 'book',
+                    'table_id': '45',
+                    'quantity': 2           
+                }
+            ],
+            'shipping_template_id': '0',
+            'shipping_price': '0.00',
+            'remark': '给卖家的留言'
+        }
+    ]
+}
+
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
 @apiSuccess (return_data) {JsonObject[]} list 订单列表
@@ -47,27 +85,70 @@
     "data": {
         list: [
             {
-                "id": "793",
-                "order_num" => "60947062",
-                "group_num" => "74361729",
-                "from_member_id" => "24398",
-                "to_member_id" => "22784",
-                "total" => "200.00",
-                "province" => "2600",
-                "city" => "2601",
-                "area" => "2605",
-                "address" => "云纺国际商厦a座",
-                "postcode" => "655400",
-                "name"=> "xx",
-                "phone" => "137xxxxxxxx",
-                "content" => "",
-                "shipping_template_id" => "0",
-                "shipping" => "0.00",
-                "add_time" => "2015-11-03 21:38:55"
+                "id":801
+                "order_number":"23395770",
+                "group_num":"14457981",
+                "from_member_id":"31527",
+                "to_member_id":1167,
+                "total":15,
+                "province":"1709",
+                "city":"1710",
+                "area":"1717",
+                "address":"武汉大学三环学生公寓",
+                "postcode":"434023",
+                "name":"杨帆",
+                "phone":"15272496375",
+                "content":"给卖家的留言",
+                "shipping_template_id":"0",
+                "shipping":"0.00"
+            },
+            {
+                "id":802
+                "order_number":"23395770",
+                "group_num":"16438470",
+                "from_member_id":"31527",
+                "to_member_id":8039,
+                "total":2,
+                "province":"1709",
+                "city":"1710",
+                "area":"1717",
+                "address":"武汉大学三环学生公寓",
+                "postcode":"434023",
+                "name":"杨帆",
+                "phone":"15272496375",
+                "content":"给卖家的留言",
+                "shipping_template_id":"0",
+                "shipping":"0.00"
             }
         ],
-        count: 1 
+        "count": 2 
     }
 }
+
+@apiUse error_1001
+@apiUse error_auth
+@apiError 1500 操作失败
+
+"""
+
+"""
+@api {PUT}
+@apiName order_pay
+@apiGroup Order
+@apiVersion 1.0.0
+@apiDescription 订单支付
+
+@apiUse header_token
+
+@apiParam
+@apiParamExample
+
+@apiSuccess
+@apiSuccessExample
+
+@apiUse error_1001
+@apiUse error_auth
+@apiError 3020 余额不足(余额支付时)
+@apiError 1500 操作失败
 
 """
