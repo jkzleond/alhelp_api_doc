@@ -140,21 +140,25 @@
 
 @apiUse header_token
 
-@apiParam (request) {String='balance','alipay', 'wxpay'} [pay_type='balance'] 支付方式 blance: 余额支付, alipay: 支付宝，
-wxpay: 微信
+@apiParam (request) {String='balance','alipay','wxpay'} [pay_type='balance'] 支付方式 blance: 余额支付, alipay: 支付宝,
+wxpay:微信
 @apiParam (body参数) {Interger[]} order_ids 订单ID列表
 
-@apiParamExample
+@apiParamExample {json} Body示例:
 {
     "order_ids": [570, 594]
 }
 
-@apiSuccess
-@apiSuccessExample
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
 
+@apiSuccessExample {json} 成功示例:
+{
+    "success": true,
+    "data": null
+}
 @apiUse error_1001
 @apiUse error_auth
 @apiError 3020 余额不足(余额支付时)
 @apiError 1500 操作失败
-
 """
