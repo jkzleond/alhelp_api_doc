@@ -23,17 +23,17 @@
     'address_id': '13',
     'items': [
         {
-            'business_id': '1167',
-            'products': [
+            'business_id': '5262',
+            'goods': [
                 {
-                    'table_name': 'book',
-                    'table_id': '41',
-                    'quantity': 10          
+                    'type': 'book',
+                    'id': '321',
+                    'quantity': 10			
                 },
                 {
-                    'table_name': 'book',
-                    'table_id': '42',
-                    'quantity': 5           
+                    'type': 'book',
+                    'id': '322',
+                    'quantity': 5			
                 }
             ],
             'shipping_template_id': '0',
@@ -41,12 +41,12 @@
             'remark': '给卖家的留言'
         },
         {
-            'business_id': '8039',
-            'products': [
+            'business_id': '5131',
+            'goods': [
                 {
-                    'table_name': 'book',
-                    'table_id': '45',
-                    'quantity': 2           
+                    'type': 'book',
+                    'id': '151',
+                    'quantity': 2			
                 }
             ],
             'shipping_template_id': '0',
@@ -132,7 +132,7 @@
 """
 
 """
-@api {PUT}
+@api {PUT} /order/pay/[:pay_type] 订单支付
 @apiName order_pay
 @apiGroup Order
 @apiVersion 1.0.0
@@ -140,8 +140,14 @@
 
 @apiUse header_token
 
-@apiParam
+@apiParam (request) {String='balance','alipay', 'wxpay'} [pay_type='balance'] 支付方式 blance: 余额支付, alipay: 支付宝，
+wxpay: 微信
+@apiParam (body参数) {Interger[]} order_ids 订单ID列表
+
 @apiParamExample
+{
+    "order_ids": [570, 594]
+}
 
 @apiSuccess
 @apiSuccessExample
