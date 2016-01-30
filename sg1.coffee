@@ -219,6 +219,119 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 ###
 
 ###
+@api {get} /demands/:uid/:type/:role/:page 获取指定用户ID需求列表
+@apiName demands_self_get
+@apiGroup Demand
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiParam (request) {Integer} uid  用户ID
+@apiParam (request) {Integer} type 需求类型， 0：全部 1：资料 2：答疑 3：授课 4：直播课
+@apiParam (request) {Integer} role 角色类型， 0：全部 1：学生 2：教师
+@apiParam (request) {Integer} page 页码
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
+{
+  "success": true,
+  "data": {
+    "list": [
+      {
+        "id": "323",
+        "member_id": "5304",
+        "member_name": "科大科院考研网",
+        "role_type": "2",
+        "demand_type": "1",
+        "description": "2014年中科大 619生物化学与分子生物学 生化与分子 考研真题资料",
+        "content_demand": "此资料适用于报考中科大生科院 《生物......",
+        "image": "upload/Attachment/201311/4018833e-e634-4317-9e9a-5b2171f0e4d2.jpg",
+        "cost_type": "1",
+        "cost": "200",
+        "platform_cost": "0",
+        "profes_type": "1",
+        "city": "34570",
+        "university": "51684",
+        "college": "51748",
+        "major_code": null,
+        "major": "",
+        "qq": "985673089",
+        "mobile": "985673089",
+        "set_time": "0000-00-00 00:00:00",
+        "close_remark": null,
+        "rating": "0",
+        "status": "1",
+        "add_time": "2013-11-11 16:20:21",
+        "update_time": null,
+        "praise_num": "0",
+        "review_num": "0",
+        "learning_teaching_plan": null,
+        "is_message": "0",
+        "is_bid": "0",
+        "is_contract": "0",
+        "is_automatic": "0",
+        "attachment": "",
+        "set_yy": "",
+        "member_nickname": "科大科院考研网",
+        "collect_num": "0",
+        "num_view": "9",
+        "memo": "非统考 学校 学院 专业" //备注
+      }
+    ],
+    "count": 20,
+    "next_page": "http://api.alhelp.net/v1/demands/1/role/2/page/2"
+  }
+}
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (return_title) {Integer} count 本页总数量
+@apiSuccess (return_title) {String} next_page 下一页uri
+@apiSuccess (return_title) {Integer} id 需求id
+@apiSuccess (return_title) {Integer} member_id 发布用户的id
+@apiSuccess (return_title) {String} member_name 发布用户的名称
+@apiSuccess (return_title) {Integer} role_type 角色类型，1：学生 2：教师
+@apiSuccess (return_title) {Integer} demand_type 需求类型， 1：资料 2：答疑 3：授课 4：直播课
+@apiSuccess (return_title) {String} description 需求描述
+@apiSuccess (return_title) {String} content_demand 需求详情
+@apiSuccess (return_title) {String} image 图片
+@apiSuccess (return_title) {Integer} cost_type 收费类型，1：免费 2：收费
+@apiSuccess (return_title) {Integer} platform_cost 平台管理费
+@apiSuccess (return_title) {Integer} cost 费用
+@apiSuccess (return_title) {Integer} profes_type 专业类型， 1：非统考 2：统考 3：公共课
+@apiSuccess (return_title) {Integer} city 城市代码
+@apiSuccess (return_title) {Integer} university 大学代码
+@apiSuccess (return_title) {Integer} college 学院代码
+@apiSuccess (return_title) {Integer} major 专业代码
+@apiSuccess (return_title) {String} qq qq号码
+@apiSuccess (return_title) {String} mobile 手机号码
+@apiSuccess (return_title) {String} set_time 有效期
+@apiSuccess (return_title) {String} add_time 需求创建时间
+@apiSuccess (return_title) {String} update_time 需求更新时间
+@apiSuccess (return_title) {String} close_remark 关闭原因
+@apiSuccess (return_title) {Integer} rating 未知
+@apiSuccess (return_title) {Integer} status -1 删除 0 未审核(下架) 1 已审核(上架) 2 未通过
+@apiSuccess (return_title) {Integer} praise_num 被赞数量
+@apiSuccess (return_title) {Integer} review_num 被评论数量
+@apiSuccess (return_title) {Integer} learning_teaching_plan 授课计划的id
+@apiSuccess (return_title) {Integer} is_message 是否有悄悄话（0：没有悄悄话，1：有新悄悄话）
+@apiSuccess (return_title) {Integer} is_bid 是否有投标（0：没有投标，1：有新投标）
+@apiSuccess (return_title) {Integer} is_contract 是否有协议（0：没有协议，1：有新协议）
+@apiSuccess (return_title) {Integer} is_automatic 1:自动产生
+@apiSuccess (return_title) {Integer} attachment 附件（填写百度网盘地址）
+@apiSuccess (return_title) {String} set_yy 未知
+@apiSuccess (return_title) {String} member_nickname 发布用户的昵称
+@apiSuccess (return_title) {String} collect_num 未知
+@apiSuccess (return_title) {String} num_view 浏览数量
+@apiSuccess (return_title) {String} memo 备注
+
+
+@apiError (error_title) 3012 该需求类型不存在
+@apiError (error_title) 3013 角色错误
+###
+
+###
 @api {get} /demand/:id 获取指定id的需求详情
 @apiName demand_get
 @apiGroup Demand

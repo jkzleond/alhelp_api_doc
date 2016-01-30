@@ -1,6 +1,7 @@
 <NotepadPlus>
-    <Project name="ahelp_api_doc">
+    <Project name="alhelp_api_doc">
         <File name="Account.php" />
+        <File name="alhelp_api_doc.project.npdpp" />
         <File name="apidoc.json" />
         <File name="apidoc.sublime-project" />
         <File name="apidoc.sublime-workspace" />
@@ -15,6 +16,7 @@
         <File name="lzl2.coffee" />
         <File name="lzl_goods.coffee" />
         <File name="lzl_gr.coffee" />
+        <File name="order.py" />
         <File name="pay.coffee" />
         <File name="sg.coffee" />
         <File name="sg1.coffee" />
