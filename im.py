@@ -7,8 +7,8 @@
 
 @apiUse header_token
 
-@apiParam (request) {Interger} [p] 页码
-@apiParam (request) {Interger} [ps] pagesize
+@apiParam (request) {Integer} [p] 页码
+@apiParam (request) {Integer} [ps] pagesize
 
 @apiSuccessExample {json} 成功示例:
 HTTP/1.1 200 OK
@@ -18,6 +18,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
     "data": [
     {
         "contact_id":"490",
+        "no_read_count": "2",
         "nickname":"香草淇淋",
         "avatar":"",
         "message_content":"haha",
@@ -80,6 +81,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
     },		
     {
         "contact_id":"516",
+        "no_read_count": "2"
         "nickname":"鬼灰小钢匙",
         "avatar":"",
         "message_content":"haha",
@@ -91,13 +93,15 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
-@apiSuccess (return_title) {String} contact_id 联系人ID
-@apiSuccess (return_title) {String} nickname 联系人昵称
-@apiSuccess (return_title) {String} avatar 联系人头像
-@apiSuccess (return_title) {String} message_content 最近一条消息
-@apiSuccess (return_title) {String=0,1,2} mime_type 消息类型 0:文本 1:图片 2:语音
-@apiSuccess (return_title) {String} goods_id 消息关联商品ID
-@apiSuccess (return_title) {JsonObject} goods 关联商品信息 字段同需求服务列表 
+@apiSuccess (data数据) {JsonObject[]} list 最近联系人列表
+@apiSuccess (list元素数据) {String} contact_id 联系人ID
+@apiSuccess (list元素数据) {Integer} no_read_count 未读消息条数
+@apiSuccess (list元素数据) {String} nickname 联系人昵称
+@apiSuccess (list元素数据) {String} avatar 联系人头像
+@apiSuccess (list元素数据) {String} message_content 最近一条消息
+@apiSuccess (list元素数据) {String=0,1,2} mime_type 消息类型 0:文本 1:图片 2:语音
+@apiSuccess (list元素数据) {String} goods_id 消息关联商品ID
+@apiSuccess (list元素数据) {JsonObject} goods 关联商品信息 字段同需求服务列表 
 
 @apiUse error_auth
 """
@@ -112,9 +116,9 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiUse header_token
 
 @apiParam (request) {String=single, group} type 发送对象类型 single:用户, group:群
-@apiParam (request) {Interger} to_id 发送对象ID 用户ID或群ID
+@apiParam (request) {Integer} to_id 发送对象ID 用户ID或群ID
 @apiParam (request) {String} content 信息内容 
-@apiParam (request) {Interger=0,1,2} mime_type 信息类型 0:文本, 1:图片, 2:语音
+@apiParam (request) {Integer=0,1,2} mime_type 信息类型 0:文本, 1:图片, 2:语音
 
 @apiParamExample {json} Body示例：
 {
@@ -133,6 +137,162 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse error_1001
 """
+
+"""
+@api {get} /im/message/history/:type/:to_id/[:p]/[:ps] 获取跟某个用户或群的聊天记录
+@apiName get_history
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 获取跟某个用户或群的聊天记录
+
+@apiUse header_token
+@apiParam (request) {String="single", "group"} type="single" single:用户, group:群
+@apiParam (request) {Integer} to_id 用户ID或群ID
+@apiParam (request) {Integer} [p]   页码
+@apiParam (request) {Integer} [ps]  每页条目数
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (data数据) {JsonObject[]} list 聊天记录列表
+@apiSuccess (data数据) {Integer} count  数据条目数
+@apiSuccess (data数据) {Integer} total_rows  数据总数
+@apiSuccess (data数据) {Integer} total_pages 总页数
+@apiSuccess (list元素数据) {Integer} id 消息ID
+@apiSuccess (list元素数据) {String} content 消息内容
+@apiSuccess (list元素数据) {Integer} mime_type 消息内容类型 0:文本, 1:图片, 2:语音
+@apiSuccess (list元素数据) {Integer} is_read 已读标记
+@apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
+@apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
+@apiSuccess (list元素数据) {String}  add_time 发送时间
+@apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
+
+@apiSuccessExample {json} 成功示例:
+{
+    "success":true,
+    "data":{
+        "list":[
+            {
+                "id":"5",
+                "content":"haha",
+                "mime_type":"0",
+                "is_read":"0",
+                "to_id":"31527",
+                "from_member_id":"516",
+                "goods_id":"0",
+                "is_to_group":"0",
+                "add_time":"2016-01-29 15:13:57",
+                "type":"1" // 1:为IM消息
+            }
+        ],
+        "count":3,
+        "total_rows":"3",
+        "total_pages":1
+    }
+}
+
+@apiUse error_1001
+@apiUse error_auth
+"""
+
+"""
+@api {get} /im/message/no_read/[:p]/[:ps] 获取未读消息
+@apiName get_no_read_msg
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 获取未读消息
+
+@apiUse header_token
+
+@apiParam (request) {Integer} [p]   页码
+@apiParam (request) {Integer} [ps]  每页条目数
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (list元素数据) {Integer} id 消息ID
+@apiSuccess (list元素数据) {String} content 消息内容
+@apiSuccess (list元素数据) {String} src 消息资源的url 当mime_type为 1, 2时
+@apiSuccess (list元素数据) {Integer} mime_type 消息内容类型 0:文本, 1:图片, 2:语音
+@apiSuccess (list元素数据) {Integer} is_read 已读标记
+@apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
+@apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
+@apiSuccess (list元素数据) {String}  add_time 发送时间
+@apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
+
+@apiSuccessExample {json} 成功示例:
+{
+    "success":true,
+    "data":{
+        "list":[
+            {
+                "id":"9",
+                "mime_type": 0, //0: 文本, 1: 图片, 2: 语音
+                "is_to_group":"1",
+                "is_read":"0",
+                "content":"一条大于十个字的消息...",
+                "src":null,
+                "from_member_id":"29",
+                "add_time":"2016-01-29 15:20:27"
+            },
+            {
+                "id":"8",
+                "mime_type": 1
+                "is_to_group":"1",
+                "is_read":"0",
+                "content":"[图片]",
+                "src": "/Uploads/Picture/demand/5467032ccd08b.jpg",
+                "from_member_id":"29",
+                "add_time":"2016-01-29 15:19:00"
+            }
+            ...
+        ]
+        "count":4,
+        "total_rows":"4",
+        "total_pages":1
+    }
+}
+
+@apiUse error_auth
+"""
+
+"""
+@api {get} /im/message/no_read_total 获取未读消息总数
+@apiName get_no_read_msg_total
+@apiGroup IM
+@apiVersion 1.0.0
+
+@apiUse header_token
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccessExample {json} 成功示例:
+{
+    "success":true,
+    "data":{
+        "total":"4"
+    }
+}
+
+@apiUse error_auth
+"""
+
+"""
+@api {put} v1/im/message/mark_read/:type/:from_id 标记消息为已读
+@apiName mark_read
+@apiGroup IM
+
+@apiUse header_token
+
+@apiParam (request) {String="single","group"} type="single" 消息发送类型 single:用户, group:群
+@apiParam (request) {Integer} from_id 发送者用户ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+"""
+
 
 """
 @api {post} /im/group$ 创建群
@@ -183,7 +343,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 群名称
+@apiParam (request) {Integer} id 群名称
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -209,7 +369,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 群名称
+@apiParam (request) {Integer} id 群名称
 @apiParam (request) {String} name 群名称
 @apiParam (request) {String} image logo图片url 需要先调用上传文件接口获取上传后资源的url
 
@@ -235,15 +395,15 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiDescription
 更新
 
-@apiParam (request) {Interger} id 群名称
+@apiParam (request) {Integer} id 群名称
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
-@apiSuccess (return_title) {Interger} id 群ID
+@apiSuccess (return_title) {Integer} id 群ID
 @apiSuccess (return_title) {String} group_id 群号
 @apiSuccess (return_title) {String} name 群名称
 @apiSuccess (return_title) {String} image 群logo图片url
-@apiSuccess (return_title) {Interger} member_num 群成员数
+@apiSuccess (return_title) {Integer} member_num 群成员数
 @apiSuccess (return_title) {String} owner_id 群主ID
 @apiSuccess (return_title) {String} owner_nickname 群主昵称
 @apiSuccess (return_title) {String} add_time 创建时间
@@ -277,8 +437,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiDescription
 获取[指定用户ID所在]群列表
 
-@apiParam {Interger} [uid] 用户ID
-@apiParam {Interger} [is_owner] 是否为群主, 也可使用 filters 过滤owner_id字段
+@apiParam {Integer} [uid] 用户ID
+@apiParam {Integer} [is_owner] 是否为群主, 也可使用 filters 过滤owner_id字段
 @apiParam {JsonObject} [filters] 过滤条件, 可使用id, group_id, name, owner_id 作为过滤条件\n
                                     支持 eq, neq, gt, egt, lt, elt, [not] like, [not] between, [not] in等表达式
 @apiParamExample {json} Body示例:
@@ -291,19 +451,20 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
-@apiSuccess (return_title) {String} prev_page 上一页url
-@apiSuccess (return_title) {String} next_page 下一页url
-@apiSuccess (return_title) {Interger} total_rows 总条目数
-@apiSuccess (return_title) {Interger} total_pages 总页数
-@apiSuccess (return_title) {JsonObject[]} list 列表数据s
-@apiSuccess (return_title) {Interger} id 群ID
-@apiSuccess (return_title) {String} group_id 群号
-@apiSuccess (return_title) {String} name 群名称
-@apiSuccess (return_title) {String} image 群logo url
-@apiSuccess (return_title) {Interger} member_num 群成员数
-@apiSuccess (return_title) {String} owner_id 群主ID
-@apiSuccess (return_title) {String} owner_nickname 群主昵称
-@apiSuccess (return_title) {String} add_time 创建时间  
+@apiSuccess (data数据) {String} prev_page 上一页url
+@apiSuccess (data数据)) {String} next_page 下一页url
+@apiSuccess (data数据)) {Integer} total_rows 总条目数
+@apiSuccess (data数据)) {Integer} total_pages 总页数
+@apiSuccess (data数据)) {JsonObject[]} list 列表数据s
+@apiSuccess (list元素数据) {Integer} id 群ID
+@apiSuccess (list元素数据) {String} group_id 群号
+@apiSuccess (list元素数据) {String} name 群名称
+@apiSuccess (list元素数据) {String} image 群logo url
+@apiSuccess (list元素数据) {Integer} member_num 群成员数
+@apiSuccess (list元素数据) {String} owner_id 群主ID
+@apiSuccess (list元素数据) {String} owner_nickname 群主昵称
+@apiSuccess (list元素数据) {String} add_time 创建时间  
+@apiSuccess (list元素数据) {Integer} no_read_count 未读消息条数  
 
 @apiSuccessExample {json} 成功示例:
 {
@@ -323,18 +484,9 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "add_time":"2016-01-23 00:00:25",
                 "owner_id":"31527",
                 "owner_nickname":"jkzleond"
+                "no_read_count": "0"
             },
-            {
-                "id":"25",
-                "group_id":"000025",
-                "name":"我们的群",
-                "member_num":"1",
-                "image":"http:\/\/api.alhelp.net",
-                "is_push":"0",
-                "owner_id":"31527",
-                "add_time":"2016-01-22 23:59:27",
-                "owner_nickname":"jkzleond"
-            }        
+            ...
         ]
     }
 }
@@ -349,8 +501,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse header_token
 
-@apiParam {Interger} id 群ID
-@apiParam {Interger[]} member_ids 用户ID数组
+@apiParam {Integer} id 群ID
+@apiParam {Integer[]} member_ids 用户ID数组
 
 @apiParamExample {json} Body示例：
 {
@@ -371,8 +523,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse header_token
 
-@apiParam {Interger} id 群ID
-@apiParam {Interger[]} member_ids 用户ID数组
+@apiParam {Integer} id 群ID
+@apiParam {Integer[]} member_ids 用户ID数组
 
 @apiParamExample {json} Body示例：
 {

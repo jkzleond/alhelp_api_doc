@@ -220,7 +220,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 ###
 @api {get} /demands/:uid/:type/:role/:page 获取指定用户ID需求列表
-@apiName demands_self_get
+@apiName get_demands_by_uid
 @apiGroup Demand
 @apiVersion 1.0.0
 

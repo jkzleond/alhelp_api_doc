@@ -455,7 +455,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -474,6 +474,36 @@ HTTP/1.1 200 OK
 ###
 
 ###
+@api {put} /talks/:id/praise 点赞或取消点赞说说
+@apiName praise_talks
+@apiGroup Talks
+@apiVersion 1.0.0
+@apiDescription
+未点赞则点赞,已点赞则取消点赞
+
+@apiUse header_token
+
+@apiParam (request) {Integer} id 说说ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (data数据) {Integer} praise_status 点赞状态 1:点赞 2:取消点赞
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": {
+    "praise_status": '1'
+  }
+}
+
+@apiUse error_1001
+@apiError (error_title) 1500 操作失败
+@apiUse error_auth
+###
+
+###
 @api {put} /talks/:id/top 置顶说说
 @apiName top_talks
 @apiGroup Talks
@@ -481,7 +511,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -506,7 +536,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -531,7 +561,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -556,7 +586,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -581,7 +611,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -606,7 +636,7 @@ HTTP/1.1 200 OK
 
 @apiUse header_token
 
-@apiParam (request) {Interger} id 说说ID
+@apiParam (request) {Integer} id 说说ID
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
