@@ -97,7 +97,6 @@ HTTP/1.1 200 OK
 @apiGroup Demand
 @apiVersion 1.0.0
 
-@apiParam {JsonObject} verify 手机验证码信息
 @apiParam {String} role_type 发布类型（1：需求、2：服务）
 @apiParam {String} demand_type 服务类型【服务：1.资料、2.答疑、3.授课、4.直播课】，【需求：1.资料、2.答疑、3.授课】
 @apiParam {String} require_identity 身份要求，0表示不限【服务：1.在线学生】，【需求：2.老师、3.机构、4.学长】
@@ -118,11 +117,6 @@ HTTP/1.1 200 OK
 
 @apiParamExample {json} 【发布服务、需求(资料、答疑、授课)】示例：
 {
-  "verify": {
-    "phone": "13800000000",
-    "code": "xxx",
-    "signkey": "xxx"
-  },
   "role_type": "2",
   "demand_type": 1,
   "require_identity": "0",
