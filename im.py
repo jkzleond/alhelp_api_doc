@@ -196,7 +196,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 """
 
 """
-@api {get} /im/message/no_read/[:p]/[:ps] 获取未读消息
+@api {get} /im/message/no_read/[:uid]/[:p]/[:ps] 获取未读消息
 @apiName get_no_read_msg
 @apiGroup IM
 @apiVersion 1.0.0
@@ -204,6 +204,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse header_token
 
+@apiParam (request) {Integer} [uid] 联系人ID
 @apiParam (request) {Integer} [p]   页码
 @apiParam (request) {Integer} [ps]  每页条目数
 
