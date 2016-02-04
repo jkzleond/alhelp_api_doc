@@ -204,7 +204,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiUse header_token
 
-@apiParam (request) {String} [type="single", "group"] 聊天类型 single:用户, group:群
+@apiParam (request) {String="single", "group"} [type] 聊天类型 single:用户, group:群
 @apiParam (request) {Integer} [uid] 联系人ID
 @apiParam (request) {Integer} [p]   页码
 @apiParam (request) {Integer} [ps]  每页条目数
