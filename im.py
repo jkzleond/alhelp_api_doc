@@ -537,3 +537,38 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
 
 """
+
+"""
+@api {GET} /im/group/:id\d/members 获取群成员列表
+@apiName get_group_mmeber_list
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 获取群成员列表
+
+@apiUse header_token
+
+@apiParam {Integer} id 群ID
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (data数据) {JsonObject[]} list 成员信息列表
+@apiSuccess (list元素数据) {Integer} member_id 成员ID
+@apiSuccess (list元素数据) {String} nickname 成员昵称
+@apiSuccess (list元素数据) {String} avatar 成员头像
+
+@apiSuccessExample {json} 成功示例:
+{
+    "success":true,
+    "data":{
+        "list":[
+                {"member_id":"31972","nickname":"jkzleondn","avatar":"http:\/\/www.alhelp.net\/Ucenter\/images\/noavatar_small.gif"},
+                {"member_id":"131","nickname":"pink冥王星","avatar":"http:\/\/www.alhelp.net\/Ucenter\/images\/noavatar_small.gif"},
+                {"member_id":"130","nickname":"wlq_14","avatar":"http:\/\/www.alhelp.net\/Ucenter\/images\/noavatar_small.gif"}
+            ],
+        "count":3,
+        "total":3,
+        "page_total":1
+    }
+}
+
+"""
