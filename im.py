@@ -118,7 +118,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiParam (request) {String=single, group} type 发送对象类型 single:用户, group:群
 @apiParam (request) {Integer} to_id 发送对象ID 用户ID或群ID
 @apiParam (request) {String} content 信息内容 
-@apiParam (request) {Integer=0,1,2} mime_type 信息类型 0:文本, 1:图片, 2:语音
+@apiParam (request) {Integer=0,1,2} mime_type 信息类型 0:文本, 1:图片, 2:语音, 3:文件
 
 @apiParamExample {json} Body示例：
 {
@@ -132,7 +132,18 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccessExample {josn} 成功示例:
 {
     "success": true,
-    "data": null
+    "data": {
+        'id': '321'
+        'content': 'http://www.alhelp.net/attachment/xxxxx.txt',
+        'mime_type': '3',
+        'filename': 'xxxxx.txt',
+        'type': '1',
+        'is_to_group': '1'
+        'from_member_id': 32571,
+        'to_id': 20352,
+        'is_read': 0,
+        'add_time': 'xxxx-xx-xx xx:xx:xx'
+    }
 }
 
 @apiUse error_1001
