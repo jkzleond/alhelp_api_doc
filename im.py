@@ -219,6 +219,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiParam (request) {Integer} [from_id] 联系人ID(用户名ID或群ID)
 @apiParam (request) {Integer} [p]   页码
 @apiParam (request) {Integer} [ps]  每页条目数
+@apiParam (request) {Integer} [_] 起始时间戳(秒)
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
@@ -262,7 +263,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
         ]
         "count":4,
         "total_rows":"4",
-        "total_pages":1
+        "total_pages":1,
+        "_": 1458289313
     }
 }
 

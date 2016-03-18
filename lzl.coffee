@@ -786,6 +786,36 @@ HTTP/1.1 200 OK
 ###
 
 
+###
+@api {get} /upload/:type 上传文件
+@apiName upload_image
+@apiGroup Upload Download
+@apiVersion 1.0.0
+@apiDescription 需要模拟form上传（一次只能上传一个文件），目前图片上传路径使用的是测试网站路径，测试情况下http://image.alhelp.net/images/......不能显示
+
+@apiUse header_token
+
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+
+@apiSuccess (return_data) {String} name 附件名(用于提供需要给需要附件的资源)
+@apiSuccess (return_data) {String} path 附件URL地址
+
+@apiSuccessExample {json} 成功示例：
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "data": {
+    "name": "0bbb95f2181d980http://youtube.com/b8ac13c89b692458567263ef4",
+    "path": "http://image.alhelp.net/images/0bbb95f2181d980b8ac13c89b692458567263ef4.jpg",
+  }
+}
+
+
+@apiError (error_title) 1417 上传失败
+###
+
 
 ###
 @api {get} /upload/image 上传图片

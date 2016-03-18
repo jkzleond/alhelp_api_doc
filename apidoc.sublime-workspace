@@ -416,26 +416,29 @@
 	"buffers":
 	[
 		{
-			"file": "/ubuntu/www/python/api_test/api_test.py",
-			"settings":
-			{
-				"buffer_size": 6353,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/jkzleond/下载/socket.io-client-master/socket.io.js",
-			"settings":
-			{
-				"buffer_size": 184654,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "im.py",
 			"settings":
 			{
-				"buffer_size": 15066,
+				"buffer_size": 15388,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lzl_goods.coffee",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# -*- coding=utf-8 -*-\nimport urllib2\nimport json\nimport sys\nimport getopt\n\nsys.getdefaultencoding()\nreload(sys)\nsys.setdefaultencoding('UTF-8')\n\n#api_host = 'http://api.alhelp.net/'\napi_host = 'http://localhost:8850/'\napis = {\n		'add_single_message': {\n			'need_token': True,\n			'method': 'POST',\n			'url': 'v1/im/message/single/31527',\n			'data': {\n				'mime_type': 0,\n				'content': 'haha'\n			}\n		},\n		'add_group_message': {\n			'need_token': True,\n			'method': 'POST',\n			'url': 'v1/im/message/group/29',\n			'data': {\n				'mime_type': 0,\n				'content': '一条大于十个字的消息会被哈哈'\n			}\n		},\n		'get_no_read_msg': {\n			'need_token': True,\n			'url': 'v1/im/message/no_read/group/29',\n			'method': 'GET',\n			'data': None\n		},\n		'get_no_read_msg_total': {\n			'need_token': True,\n			'url': 'v1/im/message/no_read_total',\n			'method': 'GET',\n			'data': None\n		},\n		'mark_read_msg': {\n			'need_token': True,\n			'url': 'v1/im/message/mark_read/single/516',\n			'method': 'PUT',\n			'data': None\n		},p\n		'get_single_history': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/im/message/history/single/516',\n			'data': None\n		},\n		'get_group_history': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/im/message/history/group/29',\n			'data': None\n		},\n		'get_rct_contacts': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/im/message/rct_contacts',\n			'data': None\n		},\n        'add_group': {\n            'need_token': True,\n			'method': 'POST',\n            'url': 'v1/im/group',\n			'data': {\n        		'name': '我们的群',\n        		'image': 'http://api.alhelp.net'\n			}\n       	},\n		'delete_group': {\n			'need_token': True,\n			'method': 'DELETE',\n			'url': 'v1/im/group/22',\n			'data': None\n		},\n		'modify_group': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/im/group/22',\n			'data': {\n				'name': '修改过的'\n			}\n		},\n		'get_group': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/im/group/16',\n			'data': None\n		},\n		'add_group_member': {\n			'need_token': False,\n			'method': 'POST',\n			'url': 'v1/im/group/34/member',\n			'data': {\n				'member_ids': [130, 131] \n			}\n		},\n		'delete_group_member': {\n			'need_token': False,\n			'method': 'DELETE',\n			'url': 'v1/im/group/22/member',\n			'data': {\n				'member_ids': [131]\n			}\n		},\n		'get_group_members': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/im/group/34/members',\n			'data': None\n		},\n		'get_groups': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/im/groups?p=1&ps=2',\n			'data': {\n				'filters': {\n					'name': '我们的群'\n				}\n			}	\n		},\n		'get_demand_collaborate': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/demands/collaborates/4834?page=1',\n			'data': None\n		},\n		'get_talk_by_id': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/talks/50'\n		},\n		'get_follows': {\n			'need_token': True,\n			'method': 'GET',\n			'url' : 'v1/follow/15034',\n			'data': None\n		},\n		'get_someone_talks_list': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/talks/list/14257',\n			'data': None\n		},\n		'get_master_talks': {\n			'need_token': False,\n			'method': 'GET',\n			'url': 'v1/talks/list/master/page/1',\n			'data': None\n		},\n		'get_follows_talks': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/talks/list/follow',\n			'data': None\n		},\n		'get_all_talks': {\n			'need_token': True,\n			'method': 'GET',\n			'url': 'v1/talks/list',\n			'data': {\n				'community_id': '2'\n			}\n		},\n		'set_talk_top': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/top',\n			'data': None\n		},\n		'unset_talk_top': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/top_off',\n			'data': None\n		},\n		'set_talk_hot': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/hot',\n			'data': None\n		},\n		'unset_talk_hot': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/hot_off',\n			'data': None\n		},\n		'set_talk_ann': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/ann',\n			'data': None\n		},\n		'unset_talk_ann': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/ann_off',\n			'data': None\n		},\n		'talk_praise': {\n			'need_token': True,\n			'method': 'PUT',\n			'url': 'v1/talks/1/praise',\n			'data': None\n		},\n		'gen_order': {\n			'need_token': True,\n			'method': 'POST',\n			'url': 'v1/order',\n			'data': {\n				'address_id': '13',\n				'items': [\n					{\n						'business_id': '5262',\n						'goods': [\n							{\n								'type': 'book',\n								'id': '321',\n								'quantity': 10			\n							},\n							{\n								'type': 'book',\n								'id': '322',\n								'quantity': 5			\n							}\n						],\n						'shipping_template_id': '0',\n						'shipping_price': '0.00',\n						'remark': '给卖家的留言'\n					},\n					{\n						'business_id': '5131',\n						'goods': [\n							{\n								'type': 'book',\n								'id': '151',\n								'quantity': 2			\n							}\n						],\n						'shipping_template_id': '0',\n						'shipping_price': '0.00',\n						'remark': '给卖家的留言'\n					}\n				]\n			}\n		},\n		'pay_order': {\n			'need_token': True,\n			'url': 'v1/order/pay/remain',\n			'method': 'PUT',\n			'data': {\n				'order_ids': [570, 594]\n			}\n		},\n		'upload_image': {\n			'need_token': False,\n			'url': 'v1/upload/test_file',\n			'method': 'POST',\n			'data': 'file'\n		}\n}\n\ntoken_url = 'http://localhost:8850/v1/tokens'\ncredential = json.dumps({\n	'passwordCredentials': {\n		'username': 'jkzleondn', \n		'password': '19831123'\n	}\n})\n\ndef api_request(api_name):\n	try:\n		api_config = apis[api_name]\n	except KeyError as e:\n		print 'api ' + api_name + ' is not defined\\n'\n		exit()\n\n	need_token = api_config['need_token']\n	api_url = api_host + api_config['url']\n	api_data = json.dumps(api_config['data'])\n	api_method 	= api_config['method']\n	\n	api_req = urllib2.Request(api_url, data=api_data)\n	api_req.get_method = lambda: api_method	\n\n	if need_token is True:\n		token_req = urllib2.Request(token_url, data=credential)\n		token_res = urllib2.urlopen(token_req)\n		token = json.loads(token_res.read())\n		api_req.add_header('X-Auth-Token', token['data']['X-Subject-Token'])\n\n	api_res = urllib2.urlopen(api_req)\n	return api_res.read()\n\ndef api_list():\n	for api_name in apis.keys():\n		print api_name\n\ndef usage():\n	print 'usage:'\n	print '-n api name you want to test'\n\nif __name__ == '__main__':\n	opt, argv = getopt.getopt(sys.argv[1:], 'n:l')\n	if len(opt) == 0:\n		usage()\n	for key, value in opt:\n		if key == '-n':\n			print api_request(value).decode('raw_unicode_escape')\n		elif key == '-l':\n			api_list()\n		else:\n			usage()\n			exit()\n	\n\n\n",
+			"file": "/ubuntu/www/python/api_test/api_test.py",
+			"file_size": 6551,
+			"file_write_time": 131025407640289690,
+			"settings":
+			{
+				"buffer_size": 6476,
 				"line_ending": "Unix"
 			}
 		},
@@ -448,10 +451,13 @@
 			}
 		},
 		{
+			"contents": "###\n@api {post} /tokens 获取用户token(授权/登陆)\n@apiName tokens\n@apiGroup Auth\n@apiVersion 1.0.0\n@apiDescription\n<p>目前仅支持passwordCredentials密码凭据登录方式（第三方登录方式待双方探讨结果后开发）</p>\n<p>获取token后，之后的大部分api请求需在header中传入token（如：X-Auth-Token: xxxxxxxxxxxxxxxxxxxx）</p>\n<p>此API认证成功后，除了返回token，同时返回当前用户所有数据行(用户数据待分析所有结构再做说明)</p>\n\n@apiParam (请求参数：passwordCredentials(密码凭据)) {String} username 登录名（昵称、邮箱、手机号）\n@apiParam (请求参数：passwordCredentials(密码凭据)) {String} password 登录密码\n\n@apiParamExample {json} Body示例：\n{\n \"passwordCredentials\":{\n     \"username\":\"username\",\n     \"password\":\"password\"\n   }\n}\n\n@apiSuccess (return_title) {String} X-Subject-Token 认证(登录)成功返回的token\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n    \"data\":{\n      \"X-Subject-Token\":\"xxxxxxxxxxxxxxxxxxxx\",\n      \"member\":{\n        ......\n      }\n    }\n}\n\n@apiUse error_1001\n@apiError (error_title) 1002 账号不存在密码不正确\n@apiError (error_title) 1003 密码不正确\n@apiError (error_title) 1004 账号不存在\n###\n\n###\n@api {post} /tokens 获取用户token(授权/登陆)\n@apiName tokens\n@apiGroup Auth\n@apiVersion 1.0.1\n@apiDescription\n<p>目前仅支持passwordCredentials密码凭据登录方式（第三方登录方式待双方探讨结果后开发）</p>\n<p>获取token后，之后的大部分api请求需在header中传入token（如：X-Auth-Token: xxxxxxxxxxxxxxxxxxxx）</p>\n<p>此API认证成功后，除了返回token，同时返回当前用户所有数据行(用户数据待分析所有结构再做说明)</p>\n\n@apiParam {String} username 登录名（昵称、邮箱、手机号）\n@apiParam {String} password 登录密码\n@apiParam {String} type 第三方登录类型（限定字符串：Weibo、Qq、weixin，大小写必须一致）\n@apiParam {String} key_id 第三方授权唯一标识\n@apiParam {String} open_info 第三方授权信息数据（json字符串）\n\n@apiParamExample {json} 账号密码登录示例：\n{\n \"passwordCredentials\":{\n     \"username\":\"username\",\n     \"password\":\"password\"\n   }\n}\n@apiParamExample {json} 第三方登录示例：\n{\n  //qqCredentials、weiboCredentials、weixinCredentials\n \"weiboCredentials\":{\n     \"key_id\":\"xxxxxxxxxxxxx\"\n   }\n}\n\n@apiSuccess (return_title) {String} X-Subject-Token 认证(登录)成功返回的token\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n    \"data\":{\n      \"X-Subject-Token\":\"xxxxxxxxxxxxxxxxxxxx\",\n      \"member\":{\n        ......\n      }\n    }\n}\n\n@apiUse error_1001\n@apiError (error_title) 1002 账号不存在\n@apiError (error_title) 1003 密码不正确\n@apiError (error_title) 1004 账号已被禁用\n@apiError (error_title) 1013 未绑定账号\n###\n\n###\n@api {post} /security/verify/sms 获取短信验证码\n@apiName verify_sms\n@apiGroup Security\n@apiVersion 1.0.1\n@apiDescription\n<p>已实现实现短信发送(正式版本)</p>\n\n@apiParam (request) {String} type 短信类型（reg：注册、ser：发布服务、unlock：激活账号）\n@apiParam (request) {String} phone 手机号\n\n@apiParamExample {json} Body示例：\n{\n  \"type\":\"reg\",\n  \"phone\": \"phone\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} signKey 签名密钥(用于提供验证码)\n@apiSuccess (return_data) {Int} create_time 验证码的创建时间\n@apiSuccess (return_data) {Int} expires_at 验证码的有效期(目前为20分钟)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"signKey\": \"v5ojtj80a9m2ck8u21l1tdeol5\",\n    \"create_time\": 1443010620,\n    \"expires_at\": 1443082620\n  }\n}\n\n@apiUse error_1001\n###\n\n###\n@api {post} /They/index 获取他人信息\n@apiName get_they_info\n@apiGroup They\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {String} type=\"theyInfo\" 操作类型\n@apiParam (request) {String} identity 用户身份(0表示教师、1表示学生)\n@apiParam (request) {String} nickname 用户昵称\n\n@apiParamExample {json} Body示例：\n{\n  \"type\": \"theyInfo\",\n  \"identity\":\"1\",\n  \"nickname\":\"nickname\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} schoolPlace 城市名\n@apiSuccess (return_data) {String} collegeName 学院名\n@apiSuccess (return_data) {String} schoolName 学校名\n@apiSuccess (return_data) {String} followNum 关注数\n@apiSuccess (return_data) {String} fansNum 粉丝数\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n  \"data\":{\n    \"schoolPlace\":\"schoolPlace\",\n    \"collegeName\":\"collegeName\",\n    \"schoolName\":\"schoolPlace\",\n    \"followNum\":\"6\",\n    \"fansNum\":\"5\"\n  }\n}\n\n\n@apiUse error_1001\n###\n\n###\n@api {post} /They/index 获取他人关注状态\n@apiName get_they_follow_status\n@apiGroup They\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam {String} type=\"getFollowStatus\" 操作类型\n@apiParam {String} nickname 用户昵称\n\n@apiParamExample {json} Body示例：\n{\n  \"type\": \"getFollowStatus\",\n  \"nickname\":\"nickname\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} follow 关注状态(true表示已关注，false表示没有关注)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n  \"data\":{\n    \"follow\":true,\n  }\n}\n\n\n@apiUse error_1001\n###\n\n###\n@api {post} /They/index 设置他人关注状态\n@apiName set_they_follow_status\n@apiGroup They\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {String} type=\"setFollowStatus\" 操作类型\n@apiParam (request) {Boolean} status 要设置的关注状态(true表示关注，false表示取消关注)\n@apiParam (request) {String} nickname 用户昵称\n\n@apiParamExample {json} Body示例：\n{\n  \"type\": \"getFollowStatus\",\n  \"status\":true,\n  \"nickname\":\"nickname\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} result 操作结果(true表示成功，false表示失败，失败情况一般为重复操作导致)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n  \"data\":{\n    \"result\":true,\n  }\n}\n\n\n@apiError (error_title) 1011 已关注此人 \n@apiError (error_title) 1404 找不到此人 \n@apiUse error_1001\n###\n\n###\n@api {post} /They/index 获取他人关注状态\n@apiName get_they_follow_status\n@apiGroup They\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam {String} type=\"getFollowStatus\" 操作类型\n@apiParam {String} nickname 用户昵称\n\n@apiParamExample {json} Body示例：\n{\n  \"type\": \"getFollowStatus\",\n  \"nickname\":\"nickname\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} follow 关注状态(true表示已关注，false表示没有关注)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n  \"data\":{\n    \"follow\":true,\n  }\n}\n\n\n@apiUse error_1001\n###\n\n###\n@api {post} /They/index 设置他人关注状态\n@apiName set_they_follow_status\n@apiGroup They\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {String} type=\"setFollowStatus\" 操作类型\n@apiParam (request) {Boolean} status 要设置的关注状态(true表示关注，false表示取消关注)\n@apiParam (request) {String} nickname 用户昵称\n\n@apiParamExample {json} Body示例：\n{\n  \"type\": \"getFollowStatus\",\n  \"status\":true,\n  \"nickname\":\"nickname\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} result 操作结果(true表示成功，false表示失败，失败情况一般为重复操作导致)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n  \"data\":{\n    \"result\":true,\n  }\n}\n\n\n@apiError (error_title) 1011 已关注此人 \n@apiError (error_title) 1404 找不到此人 \n@apiUse error_1001\n###\n\n###\n@api {post} /They/index 获取他人关注状态\n@apiName get_they_follow_status\n@apiGroup They\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam {String} type=\"getFollowStatus\" 操作类型\n@apiParam {String} nickname 用户昵称\n\n@apiParamExample {json} Body示例：\n{\n  \"type\": \"getFollowStatus\",\n  \"nickname\":\"nickname\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} follow 关注状态(true表示已关注，false表示没有关注)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\":true,\n  \"data\":{\n    \"follow\":true,\n  }\n}\n\n###\n\n###\n@api {get} /talks/:id/comment 评论或回复说说\n@apiName get_talks_comment\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {String} id 说说ID\n\n@apiParam (Body参数) {String} content 评论内容\n@apiParam (Body参数) {String} pillow_talk 是否不可见(0表示对所有人可见，1表示仅个人和被回复人可见)\n@apiParam (Body参数) {Array} [images] 图片(数组格式，传入已上传图片的name)\n\n@apiParamExample {json} Body示例：\n{\n  \"content\": \"content\",\n  \"pillow_talk\": \"0\"\n}\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {Int} comment_id 评论成功(新评论的ID)\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"comment_id\": 3618\n  }\n}\n\n\n@apiError (error_title) 1500 操作失败\n@apiError (error_title) 1404 找不到此说说\n@apiUse error_1001\n###\n\n###\n@api {post} /talks 发布说说\n@apiName add_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {String} content 说说内容\n@apiParam (request) {Int} type 说说查看权限类型（1:所有人可见，2:仅自己可见，3:仅粉丝可见，4:仅我关注的人可见）\n@apiParam (request) {Int} community_id 圈子ID（从原代码分析来看，VIP可以不指定圈子）\n@apiParam (request) {Int} [fid] 要转发的说说ID\n@apiParam (request) {Array} [remind] 要提醒谁来看,数组元素是要提醒的用户ID,int型,例如：[56,8789,5455,...]\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} talks_id 新增的说说ID\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"talks_id\": 3641\n  }\n}\n\n\n@apiError (error_title) 4011 此说说已转发过\n@apiError (error_title) 4012 说说内容不能为空\n@apiError (error_title) 4013 必须选择圈子\n@apiError (error_title) 1404 找不到要转发的说说\n@apiError (error_title) 1500 操作失败\n@apiUse error_1001\n###\n\n###\n@api {delete} /talks/:id/del 删除说说\n@apiName delete_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiError (error_title) 1501 无操作权限\n@apiError (error_title) 4004 说说不存在\n###\n\n###\n@api {put} /talks/:id/praise 点赞或取消点赞说说\n@apiName praise_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n@apiDescription\n未点赞则点赞,已点赞则取消点赞\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n@apiSuccess (data数据) {Integer} praise_status 点赞状态 1:点赞 2:取消点赞\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"praise_status\": '1'\n  }\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {put} /talks/:id/top 置顶说说\n@apiName top_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {put} /talks/:id/top_off 取消说说置顶\n@apiName top_off_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {put} /talks/:id/hot 设置热门说说\n@apiName hot_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {put} /talks/:id/hot_off 取消说说热门\n@apiName hot_off_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {put} /talks/:id/ann 设置公告说说\n@apiName ann_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {put} /talks/:id/ann_off 取消公告说说\n@apiName ann_off_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiParam (request) {Integer} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": null\n}\n\n@apiUse error_1001\n@apiError (error_title) 1500 操作失败\n@apiUse error_auth\n###\n\n###\n@api {get} /talks/similarity/:id 获取相似说说\n@apiName similarity_talks\n@apiGroup Talks\n@apiVersion 1.0.0\n@apiDescription\n4-4-3tiwen，匹配使用分词匹配，词汇数量大于2个的时候可以匹配到数据\n\n@apiUse header_token\n\n@apiParam (request) {String} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": [\n    {\n      \"id\": \"3605\",\n      \"member_nickname\": \"xzb研友邦\",\n      \"content\": \"大纲都出来了，英语分是不是该提一提了，四小点，看一看：1.关注大纲考察内容 \"\n    },\n    {\n      \"id\": \"3543\",\n      \"member_nickname\": \"yangjinglaoshi\",\n      \"content\": \"（并坚持了三年，痛并快乐地活着，我会继续坚持下去！共勉！2016考研必胜！\"\n    },\n    {\n      \"id\": \"3507\",\n      \"member_nickname\": \"夏徛荣\",\n      \"content\": \"面来说）；on good terms; come to terms with （让步）\"\n    },\n  }\n}\n\n###\n\n###\n@api {get} /talks/:id 获取说说详情\n@apiName get_talks_details\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token_opt\n\n@apiParam (request) {String} id 说说ID\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} details 说说详情\n@apiSuccess (return_data) {String} comment 评论列表\n\n@apiSuccess (返回数据:data:details) {String} id 说说ID\n@apiSuccess (返回数据:data:details) {String} member_id 用户ID\n@apiSuccess (返回数据:data:details) {String} member_nickname 用户昵称 \n@apiSuccess (返回数据:data:details) {String} avatar 用户头像\n@apiSuccess (返回数据:data:details) {String} schoolPlace 学校城市地区\n@apiSuccess (返回数据:data:details) {String} schoolName 大学名\n@apiSuccess (返回数据:data:details) {String} collegeName 学院名 \n@apiSuccess (返回数据:data:details) {String} subjectName 学科名\n@apiSuccess (返回数据:data:details) {String} content 说说内容\n@apiSuccess (返回数据:data:details) {String} praise_num 点赞数\n@apiSuccess (返回数据:data:details) {String='1', '0'} is_paised 是否点过赞(已登陆用户) '1': 是, '0': 否\n@apiSuccess (返回数据:data:details) {String='1', '0'} is_com_joined 是否在该说说所属圈子(已登陆用户) '1': 是, '0': 否\n@apiSuccess (返回数据:data:details) {Array} attachments 图片附件URL地址列表\n\n@apiSuccess (返回数据:data:comment) {String} id 回复ID\n@apiSuccess (返回数据:data:comment) {String} member_id 回复用户ID\n@apiSuccess (返回数据:data:comment) {String} member_nickname 回复用户昵称 \n@apiSuccess (返回数据:data:comment) {String} avatar 回复用户头像\n@apiSuccess (返回数据:data:comment) {String} content 回复内容\n@apiSuccess (返回数据:data:comment) {Object} to 回复谁（如果说说发布人回复他人则有），格式：id[被回复用户ID]，nickname[被回复用户昵称]\n\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"details\": {\n      \"id\": \"22\",\n      \"member_id\": \"14257\",\n      \"member_nickname\": \"夏徛荣\",\n      \"school_id\": \"0\",\n      \"content\": \"【夏老师回答问题专用！】考研路上，我一直都与孩子们同在！多少个不眠之夜和早起晨读的日子，终于等到这一天，还好你没放弃！2015年考研大戏终于落下帷幕，心中的酸甜苦辣一定有很多话想说吧!大家也一定有不少问题想问我。就写在这条说说的下面吧，我会一一回复的。\",\n      \"praise_num\": \"44\",\n      \"avatar\": \"http://image.alhelp.net/images/84d4e01ac187a6f5e2a2bc464ff739fa.jpg\",\n      \"attachments\": [\n        \"http://image.alhelp.net/images/c977471fce73a70c330fc6a51cdae0570f4a9870.jpg\"\n      ]\n    },\n    \"comment\": [\n      {\n        \"id\": \"3595\",\n        \"member_id\": \"24315\",\n        \"member_nickname\": \"xzb224315\",\n        \"content\": \"夏老师您好，我觉得基础词比必考词难背多了，基础词有很多陌生且复杂难记的名词，该怎么背呢？\",\n        \"avatar\": \"http://wx.qlogo.cn/mmopen/HWVuF8KibrNPxTeZt5lCuM36RlEGHQPczRQgLl8AOhnv6YQQkCBKqLW8yJTXjpEuiblqONDQkUQG5sMCvr0FibveHKLTC5OAtO1/0\",\n        \"to\": null\n      },\n      {\n        \"id\": \"3586\",\n        \"member_id\": \"24389\",\n        \"member_nickname\": \"wuikeee\",\n        \"content\": \"夏老师好，下载专区里的每日单词不能下载了，显示文件不存在，可不可以关注一下~~谢谢~~\",\n        \"avatar\": \"http://www.alhelp.net/ucenter/images/noavatar_small.gif\",\n        \"to\": null\n      },\n      {\n        \"id\": \"3556\",\n        \"member_id\": \"22534\",\n        \"member_nickname\": \"222534\",\n        \"content\": \"夏老师，你好，我是不需要考数学的，只需要准备专业课，我想请问一下：接下来我应该如何安排复习时间\",\n        \"avatar\": \"http://wx.qlogo.cn/mmopen/Q3auHgzwzM6xgu9pxFhQ09NytGG9acqwdqp58Sq2piceX6gianaHu9m07iaPgCxrNmStT4R1gpQsFQ7NytGrgLJ9I4YQFrktibcGiaz1lDzL3baw/0\",\n        \"to\": null\n      }\n    ]\n  }\n}\n\n\n@apiError (error_title) 4410 当前说说已被删除\n@apiError (error_title) 4411 当前说说不可见\n@apiError (error_title) 1404 找不到此说说\n@apiUse error_1001\n###\n\n\n###\n@api {get} /upload/:type 上传文件\n@apiName upload_image\n@apiGroup Upload Download\n@apiVersion 1.0.0\n@apiDescription 需要模拟form上传（一次只能上传一个文件），目前图片上传路径使用的是测试网站路径，测试情况下http://image.alhelp.net/images/......不能显示\n\n@apiUse header_token\n\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} name 附件名(用于提供需要给需要附件的资源)\n@apiSuccess (return_data) {String} path 附件URL地址\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"name\": \"0bbb95f2181d980http://youtube.com/b8ac13c89b692458567263ef4\",\n    \"path\": \"http://image.alhelp.net/images/0bbb95f2181d980b8ac13c89b692458567263ef4.jpg\",\n  }\n}\n\n\n@apiError (error_title) 1417 上传失败\n###\n\n\n###\n@api {get} /upload/image 上传图片\n@apiName upload_image\n@apiGroup Upload Download\n@apiVersion 1.0.0\n@apiDescription 需要模拟form上传（一次只能上传一个文件），目前图片上传路径使用的是测试网站路径，测试情况下http://image.alhelp.net/images/......不能显示\n\n@apiUse header_token\n\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccess (return_data) {String} name 附件名(用于提供需要给需要附件的资源)\n@apiSuccess (return_data) {String} path 附件URL地址\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"name\": \"0bbb95f2181d980http://youtube.com/b8ac13c89b692458567263ef4\",\n    \"path\": \"http://image.alhelp.net/images/0bbb95f2181d980b8ac13c89b692458567263ef4.jpg\",\n  }\n}\n\n\n@apiError (error_title) 1417 上传失败\n###\n\n###\n@api {get} /fans 获取我的粉丝（v1/fans/page/1分页）\n@apiName fans\n@apiGroup Fans\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"fans\":{\n    \"list\":[\n      {\n        \"add_time\":\"2332112\",\n        \"from_member_id\":\"1323\",\n        \"from_member_nickname\":\"name\",\n        \"last_pillow_talk_time\":\"123213234\",\n        \"is_mutual\": \"1\" //是否互相关注\n      },\n    ……\n    ],\n    \"count\":20,\n    \"next_page\":null\n  }\n}\n###\n\n###\n@api {get} /fans/:uid 获取某人的粉丝（v1/fans/:uid/page/1分页）\n@apiName fans_u\n@apiGroup Fans\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"fans\":{\n    \"list\":[\n      {\n        \"add_time\":\"2332112\",\n        \"from_member_id\":\"1323\",\n        \"from_member_nickname\":\"name\",\n        \"last_pillow_talk_time\":\"123213234\",\n        \"is_mutual\": \"1\" //是否互相关注\n      },\n    ……\n    ],\n    \"count\":20,\n    \"next_page\":null\n  }\n}\n\n###\n\n###\n@api {get} /follow 获取我关注的人（v1/follow/page/1分页）\n@apiName follow\n@apiGroup Fans\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"fans\":{\n    \"list\":[\n      {\n        \"add_time\":\"2332112\",\n        \"from_member_id\":\"1323\",\n        \"from_member_nickname\":\"name\",\n        \"last_pillow_talk_time\":\"123213234\",\n        \"is_mutual\": \"1\" //是否互相关注\n      },\n    ……\n    ],\n    \"count\":20,\n    \"next_page\":null\n  }\n}\n###\n\n###\n@api {get} /follow/:uid 获取某人关注的人（v1/follow/:uid/page/1分页）\n@apiName follow_u\n@apiGroup Fans\n@apiVersion 1.0.0\n\n@apiUse header_token\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"fans\":{\n    \"list\":[\n      {\n        \"add_time\":\"2332112\",\n        \"from_member_id\":\"1323\",\n        \"from_member_nickname\":\"name\",\n        \"last_pillow_talk_time\":\"123213234\",\n        \"is_mutual\": \"1\" //是否互相关注\n      },\n    ……\n    ],\n    \" count\":20,\n    \" next_page\":null\n  }\n}\n###\n\n###\n@api {get} /talks/listby/:type/:type_id 获取说说列表（通过大学、学院或专业ID）\n@apiName listby\n@apiGroup Talks\n@apiVersion 1.0.0\n\n@apiUse header_token_opt\n\n@apiParam (request) {String} type 筛选类型，university（大学）、school（学院）、major（专业）\n@apiParam (request) {String} type_id 筛选类型对于数据的ID（大学ID、学院ID、专业ID）\n\n@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败\n@apiSuccess (return_title) {JsonObject} data 封装的返回数据\n@apiSuccess (return_data) {JsonObject[]} list 说说列表\n@apiSuccess (return_data) {String} count 当前数据在总数\n@apiSuccess (return_data) {String} next_page 下一页地址\n@apiSuccess (list参数) {String} is_com_owner 是否圈主\n@apiSuccess (list参数) {String} is_praised 是否赞过\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\": {\n    \"list\": {\n      \"is_com_owner\": \"1\",\n      \"is_praised\": \"0\",\n      ...\n      },\n    \"count\": 0,\n    \"next_page\": null\n  }\n}\n@apiUse error_1001\n###\n\n\n###\n@api {post} /zoom_image 缩放图片\n@apiName zoom_image\n@apiGroup Upload Download\n@apiVersion 1.0.0\n@apiDescription\n默认按原比例缩放（最大高宽为128px），如果高宽比差异不大则按照128x128缩放\n\n@apiUse header_token\n\n@apiParam (request) url 图片url地址\n\n@apiParamExample {json} Body示例：\n{\n  \"url\": \"http://v1.alhelp.net/Public/Home_default/images/lesson/recomandpic.jpg\"\n}\n\n@apiSuccessExample {json} 成功示例：\nHTTP/1.1 200 OK\nContent-type: image/jpeg\n--图片二进制数据--\n\n@apiError (error_title) 1418 无效的图片地址或连接超时(包含错误的文件格式)\n###",
 			"file": "lzl.coffee",
+			"file_size": 26744,
+			"file_write_time": 130987676525345907,
 			"settings":
 			{
-				"buffer_size": 21554,
+				"buffer_size": 22304,
 				"line_ending": "Unix"
 			}
 		},
@@ -469,22 +475,6 @@
 			{
 				"buffer_size": 1472,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lzl_gr.coffee",
-			"settings":
-			{
-				"buffer_size": 9858,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sg3.coffee",
-			"settings":
-			{
-				"buffer_size": 2809,
-				"line_ending": "Windows"
 			}
 		},
 		{
@@ -549,17 +539,19 @@
 	],
 	"file_history":
 	[
+		"/home/jkzleond/alhelp_api_doc/sg3.coffee",
+		"/home/jkzleond/alhelp_api_doc/lzl_gr.coffee",
+		"/ubuntu/www/python/api_test/api_test.py",
+		"/home/jkzleond/下载/socket.io-client-master/socket.io.js",
 		"/home/jkzleond/下载/WebQQ/index.html",
 		"/ubuntu/www/php/alhelp_original/ApiApplication/Api/Model/ImessageModel.class.php",
 		"/home/jkzleond/alhelp_api_doc/im.py",
 		"/home/jkzleond/alhelp_api_doc/sg1.coffee",
 		"/home/jkzleond/alhelp_api_doc/sg2.coffee",
 		"/home/jkzleond/alhelp_api_doc/sg.coffee",
-		"/home/jkzleond/alhelp_api_doc/lzl_gr.coffee",
 		"/home/jkzleond/alhelp_api_doc/lzl_goods.coffee",
 		"/home/jkzleond/alhelp_api_doc/lzl2.coffee",
 		"/home/jkzleond/alhelp_api_doc/lzl.coffee",
-		"/home/jkzleond/alhelp_api_doc/sg3.coffee",
 		"/home/jkzleond/alhelp_api_doc/error.coffee",
 		"/home/jkzleond/alhelp_api_doc/common.coffee",
 		"/home/jkzleond/alhelp_api_doc/kim.coffee",
@@ -674,9 +666,7 @@
 		"/www/php/car_mate_admin/app/views/insurance/insuranceReservation.volt",
 		"/www/php/car_mate_admin/app/views/insurance/company.volt",
 		"/home/jkzleond/下载/5.2V2.rar",
-		"/www/php/car_mate_admin/app/views/insurance/insuranceNewInfoManage.volt",
-		"/www/php/car_mate_admin/app/models/Field.php",
-		"/www/php/car_mate_admin/app/views/insurance/InsurnaceOrderManage.volt"
+		"/www/php/car_mate_admin/app/views/insurance/insuranceNewInfoManage.volt"
 	],
 	"find":
 	{
@@ -694,6 +684,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"上传图片",
 			"/talks/:id/ann",
 			"talks/list",
 			"talks/:id",
@@ -820,8 +811,7 @@
 			"illegal_",
 			"insurance_company_",
 			"updateInsuranceType",
-			"addInsuranceType",
-			"updateInsuranceType"
+			"addInsuranceType"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -929,24 +919,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/ubuntu/www/python/api_test/api_test.py",
+					"file": "im.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6353,
+						"buffer_size": 15388,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5612,
-								5612
+								4238,
+								4238
 							]
 						],
 						"settings":
@@ -954,129 +944,21 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/jkzleond/下载/socket.io-client-master/socket.io.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 184654,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								397,
-								397
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1087,116 +969,223 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "im.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15066,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15061,
-								15061
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_unmatched_content"
 							],
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9452.0,
+						"translation.y": 2109.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lzl_goods.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/ubuntu/www/python/api_test/api_test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								975,
+								975
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1280,10 +1269,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 475.0,
+						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1292,15 +1281,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21554,
+						"buffer_size": 22304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								17878,
+								17878
 							]
 						],
 						"settings":
@@ -1308,11 +1297,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1328,51 +1312,56 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 792.0,
+						"translation.y": 14890.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1461,7 +1450,7 @@
 						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1550,189 +1539,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "lzl_gr.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9858,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 741.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "sg3.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2809,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1539.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "common.coffee",
 					"semi_transient": false,
 					"settings":
@@ -1815,7 +1626,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
