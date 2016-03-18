@@ -302,6 +302,12 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 @apiParam (request) {String="single","group"} type="single" 消息发送类型 single:用户, group:群
 @apiParam (request) {Integer} from_id 发送者用户ID
+@apiParam (body参数) {Integer[]} ids 需要标注消息的id序列
+
+@apiParamExample {json} Body实例:
+{
+    "ids": [410, 333, 170]
+}
 
 @apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
 @apiSuccess (return_title) {JsonObject} data 封装的返回数据
