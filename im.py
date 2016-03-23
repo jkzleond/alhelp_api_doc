@@ -228,6 +228,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (list元素数据) {Integer} is_read 已读标记
 @apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
 @apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {String} nickname 发送者用户ID
+@apiSuccess (list元素数据) {String} group_name 发送者用户ID
 @apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
 @apiSuccess (list元素数据) {String}  add_time 发送时间
 @apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
@@ -245,16 +247,20 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "content":"一条大于十个字的消息...",
                 "src":null,
                 "from_member_id":"29",
+                "nickname": '某某',
+                "group_name": '某群',
                 "add_time":"2016-01-29 15:20:27"
             },
             {
                 "id":"8",
                 "mime_type": 1
-                "is_to_group":"1",
+                "is_to_group":"0",
                 "is_read":"0",
                 "content":"[图片]",
                 "src": "/Uploads/Picture/demand/5467032ccd08b.jpg",
                 "from_member_id":"29",
+                "nickname": '某某',
+                "group_name": null,
                 "add_time":"2016-01-29 15:19:00"
             }
             ...
@@ -292,6 +298,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (list元素数据) {Integer} is_read 已读标记
 @apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
 @apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {String} nickname 发送者用户ID
+@apiSuccess (list元素数据) {String} group_name 发送者用户ID
 @apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
 @apiSuccess (list元素数据) {String}  add_time 发送时间
 @apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
@@ -309,16 +317,20 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "content":"一条大于十个字的消息...",
                 "src":null,
                 "from_member_id":"29",
+                "nickname": '某某',
+                "group_name": '某群',
                 "add_time":"2016-01-29 15:20:27"
             },
             {
                 "id":"8",
                 "mime_type": 1
-                "is_to_group":"1",
+                "is_to_group":"0",
                 "is_read":"0",
                 "content":"[图片]",
                 "src": "/Uploads/Picture/demand/5467032ccd08b.jpg",
                 "from_member_id":"29",
+                "nickname": '某某',
+                "group_name": null,
                 "add_time":"2016-01-29 15:19:00"
             }
             ...
@@ -357,6 +369,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (list元素数据) {Integer} is_read 已读标记
 @apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
 @apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {String} nickname 发送者用户ID
+@apiSuccess (list元素数据) {String} group_name 发送者用户ID
 @apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
 @apiSuccess (list元素数据) {String}  add_time 发送时间
 @apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
@@ -374,16 +388,20 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "content":"一条大于十个字的消息...",
                 "src":null,
                 "from_member_id":"29",
+                "nickname": '某某',
+                "group_name": '某群',
                 "add_time":"2016-01-29 15:20:27"
             },
             {
                 "id":"8",
                 "mime_type": 1
-                "is_to_group":"1",
+                "is_to_group":"0",
                 "is_read":"0",
                 "content":"[图片]",
                 "src": "/Uploads/Picture/demand/5467032ccd08b.jpg",
                 "from_member_id":"29",
+                "nickname": '某某',
+                "group_name": null,
                 "add_time":"2016-01-29 15:19:00"
             }
             ...
