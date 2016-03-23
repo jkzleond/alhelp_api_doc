@@ -208,7 +208,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 """
 @api {get} /im/message/no_read/all/[:p]/[:ps] 获取所有未读消息
-@apiName get_no_read_msg
+@apiName get_all_no_read_msg
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription 获取所有未读消息
@@ -271,7 +271,7 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 
 """
 @api {get} 'v1/im/message/no_read/:type/all/[:p]/[:ps]' 获取所有人(single)或所有群(group)的未读消息
-@apiName get_no_read_msg
+@apiName get_type_all_no_read_msg
 @apiGroup IM
 @apiVersion 1.0.0
 @apiDescription 获取所有人(single)或所有群(group)的未读消息
