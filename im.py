@@ -207,7 +207,134 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 """
 
 """
-@api {get} /im/message/no_read/[:type]/[:from_id]/[:p]/[:ps] 获取未读消息
+@api {get} /im/message/no_read/all/[:p]/[:ps] 获取所有未读消息
+@apiName get_no_read_msg
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 获取所有未读消息
+
+@apiUse header_token
+
+@apiParam (request) {Integer} [p]   页码
+@apiParam (request) {Integer} [ps]  每页条目数
+@apiParam (request) {Integer} [_] 起始时间戳(秒)
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (list元素数据) {Integer} id 消息ID
+@apiSuccess (list元素数据) {String} content 消息内容
+@apiSuccess (list元素数据) {String} src 消息资源的url 当mime_type为 1, 2时
+@apiSuccess (list元素数据) {Integer} mime_type 消息内容类型 0:文本, 1:图片, 2:语音
+@apiSuccess (list元素数据) {Integer} is_read 已读标记
+@apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
+@apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
+@apiSuccess (list元素数据) {String}  add_time 发送时间
+@apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
+
+@apiSuccessExample {json} 成功示例:
+{
+    "success":true,
+    "data":{
+        "list":[
+            {
+                "id":"9",
+                "mime_type": 0, //0: 文本, 1: 图片, 2: 语音
+                "is_to_group":"1",
+                "is_read":"0",
+                "content":"一条大于十个字的消息...",
+                "src":null,
+                "from_member_id":"29",
+                "add_time":"2016-01-29 15:20:27"
+            },
+            {
+                "id":"8",
+                "mime_type": 1
+                "is_to_group":"1",
+                "is_read":"0",
+                "content":"[图片]",
+                "src": "/Uploads/Picture/demand/5467032ccd08b.jpg",
+                "from_member_id":"29",
+                "add_time":"2016-01-29 15:19:00"
+            }
+            ...
+        ]
+        "count":4,
+        "total_rows":"4",
+        "total_pages":1,
+        "_": 1458289313
+    }
+}
+
+@apiUse error_auth
+"""
+
+"""
+@api {get} 'v1/im/message/no_read/:type/all/[:p]/[:ps]' 获取所有人(single)或所有群(group)的未读消息
+@apiName get_no_read_msg
+@apiGroup IM
+@apiVersion 1.0.0
+@apiDescription 获取所有人(single)或所有群(group)的未读消息
+
+@apiUse header_token
+
+@apiParam (request) {String="single", "group"} [type] 聊天类型 single:用户, group:群
+@apiParam (request) {Integer} [p]   页码
+@apiParam (request) {Integer} [ps]  每页条目数
+@apiParam (request) {Integer} [_] 起始时间戳(秒)
+
+@apiSuccess (return_title) {Boolean} success true表示成功，false表示失败
+@apiSuccess (return_title) {JsonObject} data 封装的返回数据
+@apiSuccess (list元素数据) {Integer} id 消息ID
+@apiSuccess (list元素数据) {String} content 消息内容
+@apiSuccess (list元素数据) {String} src 消息资源的url 当mime_type为 1, 2时
+@apiSuccess (list元素数据) {Integer} mime_type 消息内容类型 0:文本, 1:图片, 2:语音
+@apiSuccess (list元素数据) {Integer} is_read 已读标记
+@apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
+@apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
+@apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
+@apiSuccess (list元素数据) {String}  add_time 发送时间
+@apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
+
+@apiSuccessExample {json} 成功示例:
+{
+    "success":true,
+    "data":{
+        "list":[
+            {
+                "id":"9",
+                "mime_type": 0, //0: 文本, 1: 图片, 2: 语音
+                "is_to_group":"1",
+                "is_read":"0",
+                "content":"一条大于十个字的消息...",
+                "src":null,
+                "from_member_id":"29",
+                "add_time":"2016-01-29 15:20:27"
+            },
+            {
+                "id":"8",
+                "mime_type": 1
+                "is_to_group":"1",
+                "is_read":"0",
+                "content":"[图片]",
+                "src": "/Uploads/Picture/demand/5467032ccd08b.jpg",
+                "from_member_id":"29",
+                "add_time":"2016-01-29 15:19:00"
+            }
+            ...
+        ]
+        "count":4,
+        "total_rows":"4",
+        "total_pages":1,
+        "_": 1458289313
+    }
+}
+
+@apiUse error_auth
+"""
+
+"""
+@api {get} /im/message/no_read/:type/:from_id/[:p]/[:ps] 获取未读消息
 @apiName get_no_read_msg
 @apiGroup IM
 @apiVersion 1.0.0
