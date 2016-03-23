@@ -228,8 +228,10 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (list元素数据) {Integer} is_read 已读标记
 @apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
 @apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
-@apiSuccess (list元素数据) {String} nickname 发送者用户ID
-@apiSuccess (list元素数据) {String} group_name 发送者用户ID
+@apiSuccess (list元素数据) {String} nickname 发送者昵称
+@apiSuccess (list元素数据) {String} group_name 群名称
+@apiSuccess (list元素数据) {String} avatar 发送者头像
+@apiSuccess (list元素数据) {String} group_image 群logo
 @apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
 @apiSuccess (list元素数据) {String}  add_time 发送时间
 @apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
@@ -249,6 +251,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "from_member_id":"29",
                 "nickname": '某某',
                 "group_name": '某群',
+                "avatar": 'http://XXX/XXXX.png',
+                "group_image": 'http://XXX/XXXX.png',
                 "add_time":"2016-01-29 15:20:27"
             },
             {
@@ -261,6 +265,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "from_member_id":"29",
                 "nickname": '某某',
                 "group_name": null,
+                "avatar": 'http://XXX/XXXX.png',
+                "group_image": null,
                 "add_time":"2016-01-29 15:19:00"
             }
             ...
@@ -298,8 +304,10 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (list元素数据) {Integer} is_read 已读标记
 @apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
 @apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
-@apiSuccess (list元素数据) {String} nickname 发送者用户ID
-@apiSuccess (list元素数据) {String} group_name 发送者用户ID
+@apiSuccess (list元素数据) {String} nickname 发送者昵称
+@apiSuccess (list元素数据) {String} group_name 群名称
+@apiSuccess (list元素数据) {String} avatar 发送者头像
+@apiSuccess (list元素数据) {String} group_image 群logo
 @apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
 @apiSuccess (list元素数据) {String}  add_time 发送时间
 @apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
@@ -319,6 +327,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "from_member_id":"29",
                 "nickname": '某某',
                 "group_name": '某群',
+                "avatar": 'http://XXX/XXXX.png',
+                "group_image": 'http://XXX/XXXX.png',
                 "add_time":"2016-01-29 15:20:27"
             },
             {
@@ -331,6 +341,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "from_member_id":"29",
                 "nickname": '某某',
                 "group_name": null,
+                "avatar": 'http://XXX/XXXX.png',
+                "group_image": null,
                 "add_time":"2016-01-29 15:19:00"
             }
             ...
@@ -369,8 +381,10 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
 @apiSuccess (list元素数据) {Integer} is_read 已读标记
 @apiSuccess (list元素数据) {Integer} to_id 发送给的用户ID
 @apiSuccess (list元素数据) {Integer} from_member_id 发送者用户ID
-@apiSuccess (list元素数据) {String} nickname 发送者用户ID
-@apiSuccess (list元素数据) {String} group_name 发送者用户ID
+@apiSuccess (list元素数据) {String} nickname 发送者昵称
+@apiSuccess (list元素数据) {String} group_name 群名称
+@apiSuccess (list元素数据) {String} avatar 发送者头像
+@apiSuccess (list元素数据) {String} group_image 群logo
 @apiSuccess (list元素数据) {Integer} is_to_group 是否是群消息
 @apiSuccess (list元素数据) {String}  add_time 发送时间
 @apiSuccess (list元素数据) {Integer} type 消息类型 1: IM消息
@@ -390,6 +404,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "from_member_id":"29",
                 "nickname": '某某',
                 "group_name": '某群',
+                "avatar": 'http://XXX/XXXX.png',
+                "group_image": 'http://XXX/XXXX.png',
                 "add_time":"2016-01-29 15:20:27"
             },
             {
@@ -402,6 +418,8 @@ header "X-Subject-Token":"xxxxxxxxxxxxxxxxxxxx"
                 "from_member_id":"29",
                 "nickname": '某某',
                 "group_name": null,
+                "avatar": 'http://XXX/XXXX.png',
+                "group_image": null,
                 "add_time":"2016-01-29 15:19:00"
             }
             ...
